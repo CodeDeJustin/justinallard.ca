@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
-import { Projects } from "@/components/Projects";
+import { Projets } from "@/components/Projets";
 import { getUserRepositories } from "@/lib/github";
 import { LatestRepos } from "@/components/LatestRepos";
 import AllBlogs from "@/components/AllBlogs";
@@ -29,7 +29,7 @@ export default async function Page() {
         I've been building a lot of things
       </h1>
 
-      <Projects />
+      <Projets />
       <h1 className="text-2xl md:text-3xl text-white font-bold max-w-5xl mx-auto px-8 mt-40">
         Latest contributions to open source
       </h1>

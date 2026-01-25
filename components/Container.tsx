@@ -1,21 +1,17 @@
 "use client";
+
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
 import React from "react";
-import { Contact } from "./Contact";
-import { Footer } from "./Footer";
 
-import Navbar from "./Navbar/Navbar";
+type ContainerProps = {
+  children: React.ReactNode;
+  className?: string;
+};
 
-export const Container = (props: any) => {
-  const { children, className } = props;
-
+export const Container = ({ children, className }: ContainerProps) => {
   return (
-    <>
-      <main className={clsx("min-h-screen antialiased bg-zinc-900", className)}>
-        {children}
-        <Footer />
-      </main>
-    </>
+    <main className={clsx("min-h-screen antialiased bg-zinc-900", className)}>
+      {children}
+    </main>
   );
 };

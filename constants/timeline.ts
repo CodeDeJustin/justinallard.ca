@@ -1,50 +1,53 @@
-export const timeline = [
+export type TimelineItem = {
+  year: number;
+  points: string[];
+};
+
+export const timeline: TimelineItem[] = [
+  {
+    year: 2025,
+    points: [
+      "Développeur logiciel chez Harnois Énergies (Joliette).",
+      "Consultant en intégration IA: veille et évaluation d’outils pour productivité dev (ChatGPT, Codex, Devin, etc.).",
+    ],
+  },
+  {
+    year: 2024,
+    points: [
+      "Développeur Full Stack chez Logiciels Sys-Thèmes: migration d’un outil CLI vers une interface web (Flexio® ERP).",
+      "Backend Java + intégration BD, UI avec Kendo UI, correctifs et tests avant prod.",
+      "Perfectionnement web/mobile: Python/Django, site pro justinallard.ca, certifications PSM I/II, PSPO I, CSWA.",
+    ],
+  },
   {
     year: 2023,
     points: [
-      "Building a new startup, this time it's going to be a big one",
-      "Started writing blogs as a daily habit. Won the nobel prize for literature",
-      "My brother went on to pursue a career in music, he's now a famous singer",
+      "Binder: authentification sur app mobile Svelte/SvelteKit.",
+      "UI sur Figma, multilingue avec Inlang, documentation technique (Notion).",
     ],
   },
   {
-    year: 2022,
+    year: 2008,
     points: [
-      "Bought a new M2 chip macbook pro wow this is crazy!",
-      "Broke the chip as soon as I got it, had to buy a new one",
-      "Bought a new M2 chip macbook pro and started living on the streets.",
+      "Industries Harnois: automatisation de la modélisation 3D sur PTC Creo (Megadome® / Série 100®).",
+      "Optimisation des workflows et gestion documentaire sous Windchill PLM.",
+      "Gestion et suivi de projets d’ingénierie (R&D, projets spéciaux, collaboration interdisciplinaire).",
     ],
   },
   {
-    year: 2021,
+    year: 2006,
     points: [
-      "Won the interstate merathon, died 4 times on the way.",
-      "Built a side project to help the people of my country win the war against covid",
-      "Started a podcast with my brother, we talk about the latest tech news",
+      "Les portes Bourassa: coordination de projets, dessins de production, optimisation Lean Manufacturing.",
+      "Programmation de machines-outils (usinage/sculpture assistée par ordinateur).",
+      "Mise en œuvre Kanban/Kaizen/Lean/Six Sigma + création d’un manuel employé RH/procédures.",
     ],
   },
   {
-    year: 2020,
+    year: 2002,
     points: [
-      "Back at it again, this time joined facebook as a software engineer",
-      "Went on to jump right in the metaverse, and joined Oculus as a software engineer",
-      "Champion of international tetris competition held between me and my brother",
-    ],
-  },
-  {
-    year: 2019,
-    points: [
-      "Mid life crisis and decided to change career",
-      "Went on to do a Masters in Data Science",
-      "Ended up owning a farm and a small business",
-    ],
-  },
-  {
-    year: 2018,
-    points: [
-      "Graduate with a Bachelor of Mathematics",
-      "Graduate with a Bachelor of Computer Science",
-      "Graduate with a Bachelor of Statistics",
+      "ITI Hydraulik: conception-dessin CAO et coordination de projets (cylindres et unités hydrauliques).",
+      "Calcul de contraintes/tolérances, support technique interne, planification de production.",
+      "Contributions: ISO 9001 (process qualité), CTPAT, francisation de documents techniques, projet marquant (Doha, Qatar).",
     ],
   },
 ];
