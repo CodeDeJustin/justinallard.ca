@@ -8,7 +8,7 @@ function Blog({ article, hoveredIndex, setHoveredIndex, idx }: any) {
   return (
     <Link
       className="relative md:p-8"
-      href={`/blogs/${article.slug}`}
+      href={`/blogues/${article.slug}`}
       onMouseEnter={() => setHoveredIndex(idx)}
       onMouseLeave={() => setHoveredIndex(null)}
     >

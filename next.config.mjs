@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+﻿/** @type {import('next').NextConfig} */
 import nextMDX from "@next/mdx";
 import remarkGfm from "remark-gfm";
 import rehypePrism from "@mapbox/rehype-prism";
@@ -6,15 +6,18 @@ import rehypePrism from "@mapbox/rehype-prism";
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "mdx"],
   reactStrictMode: true,
+
+  // Force Next to bundle this ESM package instead of trying to require() it on the server.
+  transpilePackages: ["next-mdx-remote"],
+
   images: {
     domains: [
       "api.microlink.io", // Microlink Image Preview
       "avatars.githubusercontent.com", // GitHub avatars
     ],
   },
+
   experimental: {
-    appDir: true,
-    newNextLinkBehavior: true,
     scrollRestoration: true,
   },
 };

@@ -34,7 +34,7 @@ export function BlogLayout({
       <div className="xl:relative md:mt-20 p-8">
         <div className="mx-auto max-w-2xl">
           <Link
-            href="/blogs"
+            href="/blogues"
             aria-label="Go back to articles"
             className="group mb-8 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 transition  lg:absolute lg:-left-5 lg:mb-0 lg:-mt-2 xl:-top-1.5 xl:left-0 xl:mt-0"
           >

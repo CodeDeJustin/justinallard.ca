@@ -10,9 +10,11 @@ export async function generateStaticParams() {
 export default async function BlogPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { mdxSource, frontMatter } = await getFileBySlug("blogs", params.slug);
+  const { slug } = await params;
+  const { mdxSource, frontMatter } = await getFileBySlug("blogs", slug);
+
   return (
     <BlogLayout meta={frontMatter}>
       <RenderMDX mdxSource={mdxSource} />
