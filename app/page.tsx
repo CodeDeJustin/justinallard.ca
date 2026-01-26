@@ -10,9 +10,10 @@ import { Experience } from "@/components/Experience";
 
 export default async function Page() {
   const repos = await getUserRepositories("manuarora700");
-  const blogs = (await getAllBlogs())
-    .slice(0, 4)
-    .map(({ component, ...meta }) => meta);
+  const blogs = (await getAllBlogs()).slice(0, 4).map((b: any) => {
+    const { component, ...meta } = b;
+    return meta;
+  });
 
   const shouldShowMore = () => {
     if (repos && repos.length > 9) {

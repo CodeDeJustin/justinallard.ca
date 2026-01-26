@@ -307,17 +307,39 @@ function IconArrow() {
 
 type Square = [number, number];
 
+function hashString(str: string) {
+  // FNV-1a 32-bit, simple et stable
+  let h = 2166136261;
+  for (let i = 0; i < str.length; i++) {
+    h ^= str.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+function mulberry32(seed: number) {
+  return function () {
+    let t = (seed += 0x6d2b79f5);
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 function GridOverlay({ size = 22 }: { size?: number }) {
   const patternId = useId();
 
   const squares = useMemo<Square[]>(() => {
+    // RNG déterministe = pas de mismatch SSR/CSR
+    const rnd = mulberry32(hashString(patternId));
     const rand = (min: number, max: number) =>
-      Math.floor(Math.random() * (max - min + 1)) + min;
+      Math.floor(rnd() * (max - min + 1)) + min;
+
     return Array.from(
       { length: 6 },
       () => [rand(6, 12), rand(1, 10)] as Square,
     );
-  }, []);
+  }, [patternId]);
 
   return (
     <div className="pointer-events-none absolute inset-0 opacity-20 [mask-image:linear-gradient(white,transparent)]">

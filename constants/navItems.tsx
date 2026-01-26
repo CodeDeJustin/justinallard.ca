@@ -4,12 +4,12 @@ export const navItems = [
     link: "/profil",
   },
   {
-    name: "Projets",
-    link: "/projets",
-  },
-  {
     name: "Certifications",
     link: "/certifications",
+  },
+  {
+    name: "Projets",
+    link: "/projets",
   },
   {
     name: "Outils",
@@ -18,6 +18,10 @@ export const navItems = [
   {
     name: "Materiel",
     link: "/materiel",
+  },
+  {
+    name: "Blogues",
+    link: "/blogues",
   },
   {
     name: "Contact",

@@ -4,8 +4,9 @@ import { CustomLink } from "./CustomLink";
 import {
   AiOutlineGithub,
   AiOutlineLinkedin,
-  AiOutlineTwitter,
+  AiOutlineMedium,
 } from "react-icons/ai";
+import { SiCredly } from "react-icons/si";
 import { navItems } from "@/constants/navItems";
 import { Logo } from "./Logo";
 import { user } from "@/constants/user";
@@ -13,11 +14,11 @@ import { user } from "@/constants/user";
 export const Footer = () => {
   const socials = [
     {
-      name: "twitter",
+      name: "Medium",
       icon: (
-        <AiOutlineTwitter className="h-5 w-5 hover:text-primary transition duration-150" />
+        <AiOutlineMedium className="h-5 w-5 hover:text-primary transition duration-150" />
       ),
-      link: user.twitter,
+      link: user.medium,
     },
     {
       name: "LinkedIn",
@@ -32,6 +33,13 @@ export const Footer = () => {
         <AiOutlineGithub className="h-5 w-5 hover:text-primary transition duration-150" />
       ),
       link: user.github,
+    },
+    {
+      name: "Credly",
+      icon: (
+        <SiCredly className="h-5 w-5 hover:text-primary transition duration-150" />
+      ),
+      link: user.credly,
     },
   ];
   return (
@@ -61,9 +69,11 @@ export const Footer = () => {
               key={`footer-link-${idx}`}
               href={socialLink.link}
               className="text-zinc-500 text-sm relative"
-              target="__blank"
+              target="_blank"
+              rel="noreferrer"
+              aria-label={socialLink.name}
             >
-              <span className="relative z-10 px-2 py-2 inline-block">
+              <span className="relative z-10 px-2 py-2 inline-block hover:text-cyan-500">
                 {socialLink.icon}
               </span>
             </a>

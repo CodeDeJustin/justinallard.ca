@@ -6,15 +6,14 @@ import React, { useState } from "react";
 import { IoIosCloseCircleOutline, IoIosMenu } from "react-icons/io";
 import { CustomLink } from "../CustomLink";
 
+const EASE: [number, number, number, number] = [0.4, 0, 0.2, 1];
+
 export const MobileNav = ({ navItems }: any) => {
   const [open, setOpen] = useState(false);
   const item = {
     exit: {
       opacity: 0,
-      transition: {
-        ease: "easeInOut",
-        duration: 0.1,
-      },
+      transition: { ease: EASE, duration: 0.2 },
     },
     show: {
       height: "100vh",

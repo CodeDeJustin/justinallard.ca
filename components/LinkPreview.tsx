@@ -84,12 +84,13 @@ export const LinkPreview = ({
 
         <HoverCardPrimitive.Content side="top" align="center" sideOffset={10}>
           <Transition
+            as="div"
             show={isOpen}
             appear={true}
             enter="transform transition duration-300 origin-bottom ease-out"
             enterFrom="opacity-0 translate-y-2 scale-0"
             enterTo="opacity-100 translate-y-0 scale-100"
-            className=" rounded-xl"
+            className="rounded-xl"
           >
             <a
               href={url}
