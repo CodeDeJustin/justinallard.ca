@@ -14,9 +14,9 @@ export const projects: Project[] = [
     title: "justinallard.ca",
     description:
       "Refonte complète de mon portfolio avec Next.js, TypeScript et Tailwind. Architecture moderne, composantisée et orientée performance.",
-    image: "/images/projects/cpaporama.jpg",
+    image: "/images/projects/justinallard.png",
     stack: [stack.nextjs, stack.react, stack.typescript, stack.tailwindcss],
-    link: "/",
+    link: "https://github.com/CodeDeJustin/justinallard.ca",
     repo: "https://github.com/CodeDeJustin/justinallard.ca",
   },
   {
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       "Mon site vitrine legacy, construit volontairement en HTML/CSS/JavaScript “vanille” pour la performance et la simplicité.",
     image: "/images/projects/legacyweb.png",
     stack: [stack.html, stack.css, stack.javascript],
-    link: "https://justinallard.ca/",
-    repo: "https://github.com/CodeDeJustin/justinallard.ca",
+    link: "https://github.com/CodeDeJustin/justinallard.ca-legacy",
+    repo: "https://github.com/CodeDeJustin/justinallard.ca-legacy",
   },
 ];
