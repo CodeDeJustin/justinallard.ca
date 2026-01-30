@@ -1,38 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# justinallard.ca
 
-## Getting Started
+Site portfolio personnel de Justin Allard, construit avec Next.js (App Router), TypeScript et Tailwind CSS.
+Objectif : une vitrine rapide, élégante et maintenable pour profil, projets, certifications et articles.
 
-First, run the development server:
+## Aperçu
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+- Pages : Accueil, Profil, Projets, Certifications, Contact, Matériel, Technologies, Blogues
+- Blogues en MDX avec génération statique (SSG)
+- UI basée sur Tailwind + composants (incluant Aceternity UI Pro, adapté au contenu du site)
+
+## Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- MDX (@next/mdx, remark/rehype)
+- pnpm
+
+## Prérequis
+
+- Node.js (version LTS recommandée)
+- pnpm
+
+## Démarrage rapide
+
+Installer les dépendances :
+pnpm install
+
+Lancer en dev :
 pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Lint :
+pnpm lint
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Build de production :
+pnpm build
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Lancer le serveur (après build) :
+pnpm start
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Structure du projet
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- app/ : routes (App Router) et pages
+- components/ : composants UI réutilisables
+- content/blogs/ : contenus MDX des articles
+- public/ : assets statiques (images, icônes, etc.)
+- lib/ : utilitaires, helpers, logique de contenu
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+Variables d’environnement possibles :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- .env.local (local)
+- .env (fallback)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Attention : ne pas committer les fichiers .env\*.
 
-## Deploy on Vercel
+## Déploiement
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Le projet est prêt pour un déploiement sur une plateforme type Vercel (recommandé) ou équivalent.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Build : pnpm build
+- Start : pnpm start
+
+## Licence
+
+Non spécifiée (privée par défaut). Ajoute un fichier LICENSE si tu veux ouvrir le code.
