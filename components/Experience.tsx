@@ -5,21 +5,23 @@ import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 import Beam from "./Beam/Beam";
 import moment from "moment";
+import "moment/locale/fr";
 import { BsCheck2 } from "react-icons/bs";
 import Image from "next/image";
 
 export const Experience = () => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [activeWorkExperience, setActiveWorkExperience] = useState(
-    workExperience[0]
+    workExperience[0],
   );
   return (
     <div className=" max-w-5xl mx-auto px-8">
       <h1 className="text-2xl md:text-3xl text-white font-bold max-w-5xl mx-auto mt-20 md:mt-40">
-        Work Experience
+        Expérience professionnelle
       </h1>
       <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-4 leading-loose tracking-wide ">
-        I switch a lot of companies. It's mostly about the culture.
+        Des rôles et des mandats centrés sur la livraison: améliorer l’existant,
+        automatiser ce qui ralentit, et rendre les systèmes plus fiables.
       </p>
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-20 max-w-2xl mx-auto">
         <div className="flex flex-row md:flex-col relative overflow-x-auto md:overflow-x-visible">
@@ -57,16 +59,16 @@ export const Experience = () => {
                   "px-4 py-2 text-zinc-400 relative z-20 min-w-28 w-full text-left rounded-md flex flex-row space-x-2 items-center group",
                   activeWorkExperience?.company === exp.company
                     ? "bg-zinc-800"
-                    : null
+                    : null,
                 )}
               >
-                <div className="bg-red-500 p-1 h-6 w-6 flex items-center justify-center rounded-full bg-gradient-to-br from-zinc-700 to-zinc-800">
+                <div className="relative h-6 w-6 shrink-0 overflow-hidden rounded-full bg-gradient-to-br from-zinc-700 to-zinc-800 ring-1 ring-white/10">
                   <Image
                     src={exp.logo}
-                    width={12}
-                    height={12}
                     alt={exp.company}
-                    className="flex-shrink-0 transition duration-200"
+                    fill
+                    sizes="24px"
+                    className="object-cover"
                   />
                 </div>
                 <span>{exp.company}</span>
@@ -92,7 +94,7 @@ export const Experience = () => {
               >
                 <h1 className="text-2xl font-bold text-zinc-100">
                   {activeWorkExperience?.role}{" "}
-                  <span className="text-cyan-500">
+                  <span className="text-brand-500">
                     @ {activeWorkExperience?.company}
                   </span>
                 </h1>
@@ -111,7 +113,7 @@ export const Experience = () => {
                       key={`bullet-${idx}`}
                       className="flex flex-row space-x-2 items-start my-2"
                     >
-                      <BsCheck2 className="text-cyan-500 mt-[3px] flex-shrink-0" />
+                      <BsCheck2 className="text-brand-500 mt-[3px] flex-shrink-0" />
                       <span className="text-zinc-400 text-sm">{bullet}</span>
                     </div>
                   ))}

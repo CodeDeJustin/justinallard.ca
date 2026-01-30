@@ -1,56 +1,23 @@
-import React from "react";
-
 import { CustomLink } from "./CustomLink";
-import {
-  AiOutlineGithub,
-  AiOutlineLinkedin,
-  AiOutlineMedium,
-} from "react-icons/ai";
-import { SiCredly } from "react-icons/si";
 import { navItems } from "@/constants/navItems";
 import { Logo } from "./Logo";
-import { user } from "@/constants/user";
+import { SocialLinks } from "@/components/SocialLinks";
+
+type NavItem = {
+  name: string;
+  link: string;
+};
 
 export const Footer = () => {
-  const socials = [
-    {
-      name: "Medium",
-      icon: (
-        <AiOutlineMedium className="h-5 w-5 hover:text-primary transition duration-150" />
-      ),
-      link: user.medium,
-    },
-    {
-      name: "LinkedIn",
-      icon: (
-        <AiOutlineLinkedin className="h-5 w-5 hover:text-primary transition duration-150" />
-      ),
-      link: user.linkedin,
-    },
-    {
-      name: "GitHub",
-      icon: (
-        <AiOutlineGithub className="h-5 w-5 hover:text-primary transition duration-150" />
-      ),
-      link: user.github,
-    },
-    {
-      name: "Credly",
-      icon: (
-        <SiCredly className="h-5 w-5 hover:text-primary transition duration-150" />
-      ),
-      link: user.credly,
-    },
-  ];
   return (
     <div className="border-t border-slate-900/5 py-10 max-w-6xl mx-auto px-8">
-      <div className="flex flex-col justify-center items-center py-10 ">
+      <div className="flex flex-col justify-center items-center py-10">
         <Logo textClassName="text-white text-xl" />
 
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-4">
-          {navItems.map((navItem: any, idx: number) => (
+          {(navItems as NavItem[]).map((navItem) => (
             <CustomLink
-              key={`footer-link-${idx}`}
+              key={navItem.link}
               href={navItem.link}
               className="text-zinc-100 text-sm relative"
             >
@@ -60,25 +27,12 @@ export const Footer = () => {
             </CustomLink>
           ))}
         </div>
+
         <p className="text-zinc-200 text-sm font-light text-center mt-8 border-t border-zinc-800 pt-4">
-          © {new Date().getFullYear()} Justin Allard.
+          © {new Date().getFullYear()} Justin Allard
         </p>
-        <div className="flex flex-row justify-center space-x-2 mt-2">
-          {socials.map((socialLink: any, idx: number) => (
-            <a
-              key={`footer-link-${idx}`}
-              href={socialLink.link}
-              className="text-zinc-500 text-sm relative"
-              target="_blank"
-              rel="noreferrer"
-              aria-label={socialLink.name}
-            >
-              <span className="relative z-10 px-2 py-2 inline-block hover:text-cyan-500">
-                {socialLink.icon}
-              </span>
-            </a>
-          ))}
-        </div>
+
+        <SocialLinks className="flex flex-row justify-center space-x-2 mt-2" />
       </div>
     </div>
   );

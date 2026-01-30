@@ -39,7 +39,7 @@ const Talks = ({
             {title}
           </h4>
           <p className="text-zinc-400 text-sm">{description}</p>
-          <p className="text-zinc-600 group-hover:text-cyan-500 transition duration-200 text-sm mt-2 inline-block">
+          <p className="text-zinc-600 group-hover:text-brand-500 transition duration-200 text-sm mt-2 inline-block">
             <AiFillPlayCircle className="inline-block mb-[2px]" />{" "}
             <span>Watch Video</span>
           </p>

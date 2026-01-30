@@ -14,17 +14,17 @@ export const certifications: Certification[] = [
     title: "Project Management Professional (PMP)",
     issuer: "Project Management Institute (PMI)",
     status: "actif",
-    logoSrc: "/images/logos/pmp.png",
+    logoSrc: "/images/certifications/pmp.png",
     proofUrl:
       "https://www.credly.com/badges/dfb21b54-ce29-4c04-8651-02a70c019ecd",
-    certificatePdf: "/certificats/pmi-certification.pdf",
+    certificatePdf: "/certificats/pmp-certification.pdf",
   },
   {
     short: "PMI-CPMAI",
-    title: "PMI-CPMAI (en cours)",
-    issuer: "PMI",
+    title: "PMI Certified Professional in Managing AI (PMI-CPMAI)",
+    issuer: "Project Management Institute (PMI)",
     status: "en_cours",
-    logoSrc: "/images/logos/pmi-cpmai.png",
+    logoSrc: "/images/certifications/pmi-cpmai.png",
     proofUrl:
       "https://www.credly.com/org/project-management-institute/badge/pmi-certified-professional-in-managing-ai-pmi-cpmai",
     // optionnel: si tu as un PDF pour celui-là, ajoute-le ici.
@@ -35,7 +35,7 @@ export const certifications: Certification[] = [
     title: "Professional Scrum Master II",
     issuer: "Scrum.org",
     status: "actif",
-    logoSrc: "/images/logos/psm2.png",
+    logoSrc: "/images/certifications/psm2.png",
     proofUrl:
       "https://www.credly.com/badges/64112321-212a-440a-b74e-b826d534d492",
     certificatePdf: "/certificats/professional-scrum-master-II.pdf",
@@ -45,7 +45,7 @@ export const certifications: Certification[] = [
     title: "Professional Scrum Product Owner I",
     issuer: "Scrum.org",
     status: "actif",
-    logoSrc: "/images/logos/pspo1.png",
+    logoSrc: "/images/certifications/pspo1.png",
     proofUrl:
       "https://www.credly.com/badges/a5153edf-206d-421e-a835-421445f879e9",
     certificatePdf: "/certificats/professional-scrum-product-owner-I.pdf",
@@ -55,7 +55,7 @@ export const certifications: Certification[] = [
     title: "Professional Scrum Master I",
     issuer: "Scrum.org",
     status: "actif",
-    logoSrc: "/images/logos/psm1.png",
+    logoSrc: "/images/certifications/psm1.png",
     proofUrl:
       "https://www.credly.com/badges/17091c84-6937-4f30-9b54-8ba6ec061a3c",
     certificatePdf: "/certificats/professional-scrum-master-I.pdf",
@@ -65,7 +65,7 @@ export const certifications: Certification[] = [
     title: "Certified SOLIDWORKS Associate – Mechanical Design (CSWA)",
     issuer: "SOLIDWORKS / Dassault Systèmes",
     status: "actif",
-    logoSrc: "/images/logos/cswa.png",
+    logoSrc: "/images/certifications/cswa.png",
     // pas de badge Credly dans ton cas -> pas de proofUrl
     certificatePdf: "/certificats/cswa.pdf",
   },

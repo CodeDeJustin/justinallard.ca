@@ -1,20 +1,37 @@
 export const uses = [
   {
-    name: "16 Inch M2 MacBook Pro",
-    description: `My main machine for development that I've been using for over 6 months now. Such a beast of a machine. I love it.`,
-  },
-  {
-    name: "iPad Pro 12.9",
-    description: `Overrated in my opinion. I use it for reading books and watching movies. I don't use it for development.`,
-  },
-  {
-    name: "Keychron K2",
+    name: "Ordinateur de bureau Dell XPS",
     description:
-      "My main keyboard for development. I love the clicky keys and the compact size. I use it with a Logitech MX Master 3 mouse.",
+      "Le cœur de mon espace de travail. Configuré pour du développement intensif et de la 3D, avec des performances stables même sur de longues sessions.",
   },
   {
-    name: "Logitech MX Master 3",
+    name: "Trois moniteurs Dell 27 pouces",
     description:
-      "My main mouse for development. I love the scroll wheel and the thumb buttons. I use it with a Keychron K2 keyboard.",
+      "Productivité sans pitié: multitâche, debug, CAO et docs en parallèle, sans jongler avec les fenêtres comme en 2009.",
+  },
+  {
+    name: "Webcam + audio Logitech",
+    description:
+      "Pour des réunions claires et une collaboration à distance sans son ‘patate’ ni image ‘témoin flouté’.",
+  },
+  {
+    name: "Bureau ergonomique Motionwise (hauteur réglable)",
+    description:
+      "Assis ou debout, selon la journée. Confort et endurance, parce que le dos, lui, ne s’upgrade pas.",
+  },
+  {
+    name: "Ordinateur portable HP Envy",
+    description:
+      "Pour rester productif en déplacement, sans perdre le rythme quand je sors du bureau.",
+  },
+  {
+    name: "Batteries de secours / onduleurs APC",
+    description:
+      "Fiabilité d’abord: alimentation protégée et continuité de travail pour éviter les interruptions stupides.",
+  },
+  {
+    name: "Casque PlayStation PULSE 3D (et autres accessoires)",
+    description:
+      "Petits détails, gros impact: communication plus nette et environnement sonore plus agréable pour travailler concentré.",
   },
 ];

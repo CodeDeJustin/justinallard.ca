@@ -1,47 +1,25 @@
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
-import { Projets } from "@/components/Projets";
-import { getUserRepositories } from "@/lib/github";
-import { LatestRepos } from "@/components/LatestRepos";
-import AllBlogs from "@/components/AllBlogs";
-import { Uses } from "@/components/Uses";
-import { getAllBlogs } from "@/lib/getAllBlogs";
+import { ProjectsTeaser } from "@/components/ProjectsTeaser";
+import { BlogsTeaser } from "@/components/BlogsTeaser";
+import { HomeTechSetup } from "@/components/HomeTechSetup";
+import { getAllBlogs } from "@/lib/blogs";
 import { Experience } from "@/components/Experience";
+import Link from "next/link";
 
 export default async function Page() {
-  const repos = await getUserRepositories("manuarora700");
   const blogs = (await getAllBlogs()).slice(0, 4).map((b: any) => {
     const { component, ...meta } = b;
     return meta;
   });
 
-  const shouldShowMore = () => {
-    if (repos && repos.length > 9) {
-      return true;
-    }
-    return false;
-  };
-
   return (
     <Container>
       <Hero />
+      <HomeTechSetup />
       <Experience />
-      <h1 className="text-2xl md:text-3xl text-white font-bold max-w-5xl mx-auto px-8  mt-40">
-        I've been building a lot of things
-      </h1>
-
-      <Projets />
-      <h1 className="text-2xl md:text-3xl text-white font-bold max-w-5xl mx-auto px-8 mt-40">
-        Latest contributions to open source
-      </h1>
-      <LatestRepos repos={repos.slice(0, 9)} showMore={shouldShowMore()} />
-
-      <div className="max-w-5xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-3 gap-10 mt-40 ">
-        <div className="col-span-2">
-          <AllBlogs blogs={blogs} />
-        </div>
-        <Uses />
-      </div>
+      <ProjectsTeaser />
+      <BlogsTeaser blogs={blogs} />
     </Container>
   );
 }

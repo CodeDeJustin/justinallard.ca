@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import AllBlogs from "@/components/AllBlogs";
-import { getAllBlogs } from "@/lib/getAllBlogs";
+import AllBlogs from "@/app/blogues/_components/AllBlogs";
+import { getAllBlogs } from "@/lib/blogs";
 
-export const metadata = {
-  title: "Blogs | Justin Allard",
+export const metadata: Metadata = {
+  title: "Blogue | Justin Allard",
 };
 
 export default async function BlogsPage() {
@@ -14,19 +15,20 @@ export default async function BlogsPage() {
 
   return (
     <Container>
-      <div className="max-w-5xl mx-auto px-8 mt-10 md:mt-20 relative ">
+      <div className="max-w-5xl mx-auto px-8 mt-10 md:mt-20 relative">
         <div>
           <h1 className="font-bold text-3xl md:text-5xl md:leading-tight text-zinc-50 max-w-3xl">
-            All of my
-            <span className="text-cyan-500"> Technical Knowledge</span> in one
-            place
+            Blogue&nbsp;:{" "}
+            <span className="text-brand-500">notes de terrain</span>
           </h1>
           <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-8 md:leading-loose tracking-wide">
-            I'm obsessed with writing bad code. I'm also obsessed with writing.
-            Here, I write about my experiences with code and the things I've
-            learned along the way.
+            J’écris sur le leadership, Scrum, la culture d’équipe et la vie
+            réelle en entreprise (celle qui ne rentre jamais dans les beaux
+            diagrammes). Objectif&nbsp;: partager des idées concrètes, des
+            exemples, et quelques prises de position assumées.
           </p>
         </div>
+
         <div className="mt-20">
           <AllBlogs blogs={blogs} />
         </div>

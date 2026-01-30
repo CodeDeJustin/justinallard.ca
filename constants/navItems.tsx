@@ -12,11 +12,11 @@ export const navItems = [
     link: "/projets",
   },
   {
-    name: "Outils",
-    link: "/outils",
+    name: "Technologies",
+    link: "/technologies",
   },
   {
-    name: "Materiel",
+    name: "Matériel",
     link: "/materiel",
   },
   {

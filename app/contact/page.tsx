@@ -1,8 +1,12 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/Container";
-import ContactForm from "./ContactForm";
+import ContactForm from "./_components/ContactForm";
 
-export const metadata = {
-  title: "Contact | Justin Allard",
+export const metadata: Metadata = {
+  title: "Vas-tu m'écrire?",
+  icons: {
+    icon: "/icones/red-heart-icon.ico",
+  },
 };
 
 export default function ContactPage() {

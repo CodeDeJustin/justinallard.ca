@@ -3,12 +3,17 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/Footer";
 import { Contact } from "@/components/Contact";
+import { TabAttention } from "@/components/TabAttention";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Devpro | Portfolio Template",
-  description: "A portfolio template for developers and designers.",
-  metadataBase: new URL("https://yourwebsite.com"),
+  title: "Justin Allard",
+  description:
+    "Développeur logiciel Full Stack avec un profil hybride CAO/PLM et gestion de projets.",
+  metadataBase: new URL("http://localhost:3000"),
+  icons: {
+    icon: "/icones/coffee-icon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -19,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen antialiased bg-zinc-900">
+        <TabAttention />
         <Navbar />
         {children}
         <Footer />

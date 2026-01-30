@@ -51,9 +51,9 @@ const Beam = ({ showBeam, className }: any) => {
       <span
         ref={meteorRef}
         className={twMerge(
-          "absolute z-20  left-4  h-[0.1rem] w-[0.1rem] rounded-[9999px] bg-blue-700 shadow-[0_0_0_1px_#ffffff10] rotate-[180deg] before:bg-gradient-to-l before:from-transparent before:via-blue-500 before:to-cyan-500",
+          "absolute z-20  left-4  h-[0.1rem] w-[0.1rem] rounded-[9999px] bg-blue-700 shadow-[0_0_0_1px_#ffffff10] rotate-[180deg] before:bg-gradient-to-l before:from-transparent before:via-red-500 before:to-brand-500",
           styles.meteor,
-          className
+          className,
         )}
       ></span>
     )

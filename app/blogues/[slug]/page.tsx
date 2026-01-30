@@ -1,6 +1,6 @@
-import { getAllBlogs, getFileBySlug } from "@/lib/getAllBlogs";
+import { getAllBlogs, getFileBySlug } from "@/lib/blogs";
 import { RenderMDX } from "@/components/RenderMDX";
-import { BlogLayout } from "@/components/BlogLayout";
+import { BlogLayout } from "../_components/BlogLayout";
 
 export async function generateStaticParams() {
   const blogs = await getAllBlogs();
