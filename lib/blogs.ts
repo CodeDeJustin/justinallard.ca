@@ -33,11 +33,11 @@ async function importBlog(blogFileNames: string) {
 }
 
 export async function getAllBlogs() {
-  let blogFileNames = await glob(["*.mdx", "*/index.mdx"], {
+  const blogFileNames = await glob(["*.mdx", "*/index.mdx"], {
     cwd: path.join(process.cwd(), "content/blogs"),
   });
 
-  let blogs = await Promise.all(blogFileNames.map(importBlog));
+  const blogs = await Promise.all(blogFileNames.map(importBlog));
 
   return blogs.sort((a, b) => {
     const dateA = new Date(a.date);

@@ -4,13 +4,12 @@ import Navbar from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/Footer";
 import { Contact } from "@/components/Contact";
 import { TabAttention } from "@/components/TabAttention";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Justin Allard",
   description:
     "Développeur logiciel Full Stack avec un profil hybride CAO/PLM et gestion de projets.",
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://justinallard.ca"),
   icons: {
     icon: "/icones/coffee-icon.ico",
   },
@@ -22,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="fr-CA">
       <body className="min-h-screen antialiased bg-zinc-900">
         <TabAttention />
         <Navbar />

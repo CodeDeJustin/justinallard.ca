@@ -11,9 +11,15 @@ const nextConfig = {
   transpilePackages: ["next-mdx-remote"],
 
   images: {
-    domains: [
-      "api.microlink.io", // Microlink Image Preview
-      "avatars.githubusercontent.com", // GitHub avatars
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.microlink.io",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      },
     ],
   },
 
