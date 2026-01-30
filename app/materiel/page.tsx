@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import { MaterielStickyScroll } from "./_components/MaterielStickyScroll";
+import { EncryptedText } from "@/components/ui/encrypted-text";
 
 export const metadata: Metadata = { title: "Matériel | Justin Allard" };
 

@@ -8,7 +8,7 @@ export function CertificationCard({ c }: { c: Certification }) {
   const credlyUrl = c.proofUrl ?? user.credly;
 
   return (
-    <CardSpotlight className="group rounded-2xl border border-zinc-800 bg-zinc-950/40 p-5 hover:bg-zinc-950/60 transition">
+    <CardSpotlight className="group rounded-2xl border border-zinc-800 bg-zinc-800 p-5 hover:bg-zinc-950/60 transition">
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">

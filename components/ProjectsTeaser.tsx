@@ -13,7 +13,7 @@ function ProjectCard({ project }: { project: Project }) {
   const CardInner = (
     <>
       <div className="flex items-start gap-4">
-        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-zinc-900/60">
+        <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-zinc-800">
           <Image
             src={project.image}
             alt={project.title}
@@ -54,7 +54,7 @@ function ProjectCard({ project }: { project: Project }) {
   );
 
   const className =
-    "group rounded-3xl border border-white/10 bg-zinc-900/60 p-4 h-full " +
+    "group rounded-3xl border border-white/10 bg-zinc-800 p-4 h-full " +
     "hover:border-white/20 transition " +
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/50 " +
     "focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 flex flex-col";

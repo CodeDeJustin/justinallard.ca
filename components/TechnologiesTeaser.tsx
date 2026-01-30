@@ -46,7 +46,7 @@ export function TechnologiesTeaser({
         {items.map(({ file, label }, idx) => (
           <div
             key={`${file}-${idx}`}
-            className="group flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-zinc-900/60 p-4"
+            className="group flex min-w-0 items-center gap-3 rounded-2xl border border-white/10 bg-zinc-800 p-4"
             title={label}
           >
             <TechLogo

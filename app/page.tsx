@@ -5,7 +5,7 @@ import { BlogsTeaser } from "@/components/BlogsTeaser";
 import { HomeTechSetup } from "@/components/HomeTechSetup";
 import { getAllBlogs } from "@/lib/blogs";
 import { Experience } from "@/components/Experience";
-import Link from "next/link";
+import { CertificationsTeaser } from "@/components/CertificationsTeaser";
 
 export default async function Page() {
   const blogs = (await getAllBlogs()).slice(0, 4).map((b: any) => {
@@ -18,6 +18,7 @@ export default async function Page() {
       <Hero />
       <HomeTechSetup />
       <Experience />
+      <CertificationsTeaser />
       <ProjectsTeaser />
       <BlogsTeaser blogs={blogs} />
     </Container>

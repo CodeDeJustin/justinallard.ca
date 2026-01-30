@@ -61,7 +61,7 @@ export const ProjectsGrid = () => {
               </AnimatePresence>
 
               {/* Card: bordure exactement "template-like" */}
-              <div className="rounded-2xl h-full w-full overflow-hidden bg-zinc-900/60 border border-white/10 group-hover:border-white/20 relative z-20">
+              <div className="rounded-2xl h-full w-full overflow-hidden bg-zinc-800 border border-white/10 group-hover:border-white/20 relative z-20">
                 <div className="relative z-50 flex h-full flex-col">
                   <div className="relative h-44 sm:h-60 md:h-44 w-full transition duration-500 bg-black/10 group-hover:bg-transparent">
                     <Image
