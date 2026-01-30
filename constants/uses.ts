@@ -16,8 +16,7 @@ export const uses = [
   },
   {
     name: "Bureau ergonomique Motionwise (hauteur réglable)",
-    description:
-      "Assis ou debout, selon la journée. Confort et endurance, parce que le dos, lui, ne s’upgrade pas.",
+    description: "Assis ou debout, selon la journée.",
   },
   {
     name: "Ordinateur portable HP Envy",
