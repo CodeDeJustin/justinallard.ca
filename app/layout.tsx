@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import type { Metadata } from "next";
+import Script from "next/script";
 import Navbar from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/Footer";
 import { Contact } from "@/components/Contact";
@@ -23,6 +24,12 @@ export default function RootLayout({
   return (
     <html lang="fr-CA">
       <body className="min-h-screen antialiased bg-zinc-900">
+        <Script
+          id="cookieyes"
+          src="https://cdn-cookieyes.com/client_data/cc5706dbc70897eafe23e0e6/script.js"
+          strategy="beforeInteractive"
+        />
+
         <TabAttention />
         <Navbar />
         {children}
