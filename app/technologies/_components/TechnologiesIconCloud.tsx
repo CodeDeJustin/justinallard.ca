@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Cloud, type ICloud } from "react-icon-cloud";
 import { technologies } from "@/constants/technologies";
 
@@ -32,7 +32,13 @@ const cloudProps: Omit<ICloud, "children"> = {
 };
 
 export function TechnologiesIconCloud() {
-  const icons = React.useMemo(() => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const icons = useMemo(() => {
     return technologies.map(({ file, label }) => (
       <a
         key={file}
@@ -54,6 +60,11 @@ export function TechnologiesIconCloud() {
       </a>
     ));
   }, []);
+
+  // Important: pas de rendu Cloud avant mount (évite mismatch SSR/client)
+  if (!mounted) {
+    return <div style={{ width: "100%", minHeight: 420 }} />;
+  }
 
   return (
     <div style={{ width: "100%", minHeight: 420 }}>
