@@ -34,7 +34,7 @@ export const technologiesSections = [
       { file: "visualstudio.svg", label: "Visual Studio" },
       { file: "vscode.svg", label: "VS Code" },
       { file: "git.svg", label: "Git" },
-      { file: "gh.svg", label: "GitHub" },
+      { file: "GitHub_Invertocat_White.svg", label: "GitHub" },
       { file: "jira.svg", label: "Jira" },
       { file: "confluence.svg", label: "Confluence" },
       { file: "azure.svg", label: "Azure" },
