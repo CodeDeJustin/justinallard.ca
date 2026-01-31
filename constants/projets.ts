@@ -15,7 +15,13 @@ export const projects: Project[] = [
     description:
       "Refonte complète de mon portfolio avec Next.js, TypeScript et Tailwind. Architecture moderne, composantisée et orientée performance.",
     image: "/images/projects/justinallard.png",
-    stack: [stack.nextjs, stack.react, stack.typescript, stack.tailwindcss],
+    stack: [
+      stack.nextjs,
+      stack.react,
+      stack.typescript,
+      stack.tailwindcss,
+      stack.vscode,
+    ],
     link: "https://github.com/CodeDeJustin/justinallard.ca",
     repo: "https://github.com/CodeDeJustin/justinallard.ca",
   },

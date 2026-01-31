@@ -8,6 +8,7 @@ type TechLogoProps = {
   size?: number;
   className?: string;
   priority?: boolean;
+  mode?: "image" | "mask";
 };
 
 export function TechLogo({
@@ -16,8 +17,36 @@ export function TechLogo({
   size = 28,
   className = "",
   priority = false,
+  mode = "image",
 }: TechLogoProps) {
   const isSvg = src.toLowerCase().endsWith(".svg");
+
+  if (mode === "mask") {
+    return (
+      <span
+        role="img"
+        aria-label={alt}
+        style={{
+          width: size,
+          height: size,
+          backgroundColor: "var(--logo-color, #a1a1aa)", // fallback gris visible
+          WebkitMaskImage: `url(${src})`,
+          maskImage: `url(${src})`,
+          WebkitMaskRepeat: "no-repeat",
+          maskRepeat: "no-repeat",
+          WebkitMaskSize: "contain",
+          maskSize: "contain",
+          WebkitMaskPosition: "center",
+          maskPosition: "center",
+        }}
+        className={[
+          "inline-block shrink-0",
+          "transition-[opacity] duration-200 ease-out",
+          className,
+        ].join(" ")}
+      />
+    );
+  }
 
   return (
     <Image

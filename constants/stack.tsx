@@ -51,7 +51,19 @@ export const stack: Record<string, StackItem> = {
   django: {
     name: "Django",
     id: "django",
-    icon: <TechLogo src="/images/logos/django-plain.svg" alt="Django" />,
+    icon: (
+      <TechLogo
+        src="/images/logos/django-plain.svg"
+        alt="Django"
+        mode="mask"
+        className="
+  [--logo-color:#a1a1aa] opacity-80
+  hover:[--logo-color:#44B78B] hover:opacity-100
+  group-hover:[--logo-color:#44B78B] group-hover:opacity-100
+  group-focus-visible:[--logo-color:#44B78B] group-focus-visible:opacity-100
+"
+      />
+    ),
   },
   flutter: {
     name: "Flutter",
