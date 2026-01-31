@@ -37,10 +37,12 @@ export const ProjectsGrid = () => {
           {projects.map((project, idx) => (
             <a
               href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={project.link}
               className="relative group block p-2 h-full w-full rounded-3xl
-                         focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/50
-                         focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
+             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/50
+             focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
               onPointerEnter={() => handleEnter(idx)}
               onPointerLeave={handleLeave}
             >
