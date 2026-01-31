@@ -34,16 +34,18 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2">
-        {project.stack.slice(0, 4).map((s, i) => (
-          <span
-            key={`stack-${project.title}-${i}`}
-            title={s.name}
-            className="opacity-80"
-          >
-            {s.icon}
-          </span>
-        ))}
+      <div className="mt-4">
+        <div className="mx-auto flex flex-wrap justify-center gap-x-3 gap-y-2">
+          {project.stack.slice(0, 5).map((s, i) => (
+            <span
+              key={`stack-${project.title}-${i}`}
+              title={s.name}
+              className="opacity-80 inline-flex"
+            >
+              {s.icon}
+            </span>
+          ))}
+        </div>
       </div>
 
       <div className="mt-auto pt-4 flex items-center gap-2 text-zinc-500 group-hover:text-brand-500">
