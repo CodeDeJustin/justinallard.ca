@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar/Navbar";
 import { Footer } from "@/components/Footer";
 import { Contact } from "@/components/Contact";
 import { TabAttention } from "@/components/TabAttention";
-import { CookieConsent } from "@/components/CookieConsent/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Justin Allard",
@@ -29,7 +28,6 @@ export default function RootLayout({
         {children}
         <Footer />
         <Contact />
-        <CookieConsent />
       </body>
     </html>
   );
