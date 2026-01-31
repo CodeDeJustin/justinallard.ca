@@ -1,4 +1,4 @@
-import { user } from "@/constants/user";
+import { user } from "@/constants/userMediaLink";
 import { certifications } from "@/constants/certifications";
 import { CertificationCard } from "./CertificationCard";
 

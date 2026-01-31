@@ -1,4 +1,4 @@
-import { user } from "@/constants/user";
+import { userMediaLink } from "@/constants/userMediaLink";
 import type { IconType } from "react-icons";
 import {
   SiCredly,
@@ -15,9 +15,9 @@ export type SocialLink = {
 };
 
 export const socialLinks: SocialLink[] = [
-  { name: "Medium", href: user.medium, Icon: SiMedium },
-  { name: "LinkedIn", href: user.linkedin, Icon: SiLinkedin },
-  { name: "GitHub", href: user.github, Icon: SiGithub },
-  { name: "Credly", href: user.credly, Icon: SiCredly },
-  { name: "Messenger", href: user.messenger, Icon: SiMessenger },
+  { name: "Medium", href: userMediaLink.medium, Icon: SiMedium },
+  { name: "LinkedIn", href: userMediaLink.linkedin, Icon: SiLinkedin },
+  { name: "GitHub", href: userMediaLink.github, Icon: SiGithub },
+  { name: "Credly", href: userMediaLink.credly, Icon: SiCredly },
+  { name: "Messenger", href: userMediaLink.messenger, Icon: SiMessenger },
 ];

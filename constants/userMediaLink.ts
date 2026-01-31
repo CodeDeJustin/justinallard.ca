@@ -1,4 +1,4 @@
-export const user = {
+export const userMediaLink = {
   github: "https://github.com/CodeDeJustin",
   linkedin: "https://www.linkedin.com/in/justinallard-pmp/",
   medium: "https://medium.com/@justinallard",

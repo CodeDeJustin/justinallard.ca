@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { user } from "@/constants/user";
+import { user } from "@/constants/userMediaLink";
 import type { Certification } from "@/constants/certifications";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
