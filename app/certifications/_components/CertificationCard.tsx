@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { user } from "@/constants/userMediaLink";
+import { userMediaLink } from "@/constants/userMediaLink";
 import type { Certification } from "@/constants/certifications";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 export function CertificationCard({ c }: { c: Certification }) {
   const status = c.status ?? "actif";
-  const credlyUrl = c.proofUrl ?? user.credly;
+  const credlyUrl = c.proofUrl ?? userMediaLink.credly;
 
   return (
     <CardSpotlight className="group rounded-2xl border border-zinc-800 bg-zinc-800 p-5 hover:bg-zinc-950/60 transition">
@@ -55,7 +55,7 @@ export function CertificationCard({ c }: { c: Certification }) {
 
       <div className="mt-3 flex flex-wrap gap-3">
         <a
-          href={c.proofUrl ? credlyUrl : user.credly}
+          href={c.proofUrl ? credlyUrl : userMediaLink.credly}
           target="_blank"
           rel="noreferrer"
           className={

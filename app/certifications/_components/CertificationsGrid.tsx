@@ -1,4 +1,4 @@
-import { user } from "@/constants/userMediaLink";
+import { userMediaLink } from "@/constants/userMediaLink";
 import { certifications } from "@/constants/certifications";
 import { CertificationCard } from "./CertificationCard";
 
@@ -13,7 +13,7 @@ export function CertificationsGrid() {
 
       <div className="flex justify-center mt-10">
         <a
-          href={user.credly}
+          href={userMediaLink.credly}
           target="_blank"
           rel="noreferrer"
           className="text-zinc-200 border border-zinc-600 bg-zinc-900 px-8 py-2 rounded-lg hover:border-zinc-700 hover:bg-zinc-800/[0.8] transition duration-200"
