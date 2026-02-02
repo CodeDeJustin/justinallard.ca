@@ -80,7 +80,7 @@ const CONTACT_LINKS: ContactLink[] = [
   },
   {
     label: "GrabCAD",
-    href: "https://grabcad.com/justinallard-3",
+    href: "https://grabcad.com/justin.allard-3",
     subtitle: "grabcad.com",
     icon: (
       <LogoIcon
