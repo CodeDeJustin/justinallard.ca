@@ -15,7 +15,6 @@ export const technologiesSections = [
       { file: "pnpm.svg", label: "pnpm" },
       { file: "python.svg", label: "Python" },
       { file: "java.svg", label: "Java" },
-      { file: "kotlin.svg", label: "Kotlin" },
     ],
   },
   {
@@ -47,6 +46,7 @@ export const technologiesSections = [
     items: [
       { file: "flutter.svg", label: "Flutter" },
       { file: "dart.svg", label: "Dart" },
+      { file: "kotlin.svg", label: "Kotlin" },
       { file: "androidstudio.svg", label: "Android Studio" },
     ],
   },
