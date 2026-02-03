@@ -14,8 +14,9 @@ export default function TechnologiesPage() {
           Technologies
         </h1>
         <p className="text-zinc-400 mt-6 md:leading-loose max-w-3xl">
-          Les technologies, c’est dans les projets. Ici, c’est le quotidien:
-          environnement, IDE, outils et workflow.
+          Voici mon stack, regroupé par domaines: développement, backend &
+          données, outils, mobile, et CAO/PLM. C’est ce que j’utilise pour
+          livrer, automatiser et maintenir des solutions solides.
         </p>
 
         <TechnologiesShowcase />

@@ -12,7 +12,7 @@ export const uses = [
   {
     name: "Webcam + audio Logitech",
     description:
-      "Pour des réunions claires et une collaboration à distance sans son ‘patate’ ni image ‘témoin flouté’.",
+      "Pour des réunions nettes: image propre, son clair, et moins de ‘répète donc?’ en appel.",
   },
   {
     name: "Bureau ergonomique Motionwise (hauteur réglable)",
@@ -81,17 +81,13 @@ export const materielContent: MaterielContentItem[] = [
   {
     title: "Audio & visio",
     image: "/images/materiel/carrousel2.jpg",
-    description: descFrom([
-      "Webcam + audio Logitech",
-      "Casque PlayStation PULSE 3D (et autres accessoires)",
-    ]),
+    description: descFrom(["Webcam + audio Logitech"]),
   },
   {
     title: "Périphériques de productivité",
     image: "/images/materiel/carrousel3.jpg",
     description: descFrom([
       "Casque PlayStation PULSE 3D (et autres accessoires)",
-      "Webcam + audio Logitech",
     ]),
   },
   {
