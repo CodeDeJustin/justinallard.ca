@@ -1,6 +1,5 @@
 "use client";
 
-import { LinkPreview } from "./LinkPreview";
 import { FlippingText } from "@/components/ui/flipping-text";
 
 export const Hero = () => {
@@ -22,11 +21,12 @@ export const Hero = () => {
       </h1>
 
       <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-8 leading-loose tracking-wide">
-        Je construis des produits et des outils qui tiennent la route: du web
-        moderne côté Full Stack, et des automatismes côté CAO/PLM quand le
-        “clic-clic-clic” devient une perte de temps monumentale. J’aime les
-        systèmes simples, les livraisons propres, et les décisions qui survivent
-        à la production.
+        Je transforme des besoins réels en solutions qui tiennent la route:
+        applications web, outils internes et automatisations qui éliminent le
+        travail répétitif. Mon avantage, c’est le profil hybride Full Stack +
+        CAO/PLM, soutenu par une rigueur de livraison (PMP, Scrum): cadrage
+        clair, exécution propre, et décisions qui survivent à la production.
+        Bref, moins de “clic-clic-clic”, plus de valeur livrée.
       </p>
     </div>
   );
