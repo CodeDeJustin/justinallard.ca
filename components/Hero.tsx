@@ -28,24 +28,6 @@ export const Hero = () => {
         systèmes simples, les livraisons propres, et les décisions qui survivent
         à la production.
       </p>
-
-      <div className="mt-8 text-zinc-400 text-sm md:text-base max-w-2xl leading-loose tracking-wide">
-        Tu peux voir ce que je publie sur{" "}
-        <LinkPreview
-          className="text-zinc-200 font-bold hover:text-brand-500 transition duration-150 outline-none"
-          url="https://github.com/CodeDeJustin"
-        >
-          GitHub
-        </LinkPreview>{" "}
-        et mes notes sur{" "}
-        <LinkPreview
-          className="text-zinc-200 font-bold hover:text-brand-500 transition duration-150 outline-none"
-          url="https://medium.com/@justinallard"
-        >
-          Medium
-        </LinkPreview>
-        .
-      </div>
     </div>
   );
 };
