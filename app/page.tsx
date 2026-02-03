@@ -4,7 +4,7 @@ import { ProjectsTeaser } from "@/components/ProjectsTeaser";
 import { BlogsTeaser } from "@/components/BlogsTeaser";
 import { HomeTechSetup } from "@/components/HomeTechSetup";
 import { getAllBlogs } from "@/lib/blogs";
-import { Experience } from "@/components/Experience";
+import { ExperienceTeaser } from "@/components/ExperienceTeaser";
 import { CertificationsTeaser } from "@/components/CertificationsTeaser";
 
 export default async function Page() {
@@ -17,7 +17,7 @@ export default async function Page() {
     <Container>
       <Hero />
       <HomeTechSetup />
-      <Experience />
+      <ExperienceTeaser />
       <CertificationsTeaser />
       <ProjectsTeaser />
       <BlogsTeaser blogs={blogs} />

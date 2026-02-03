@@ -9,37 +9,42 @@ import "moment/locale/fr";
 import { BsCheck2 } from "react-icons/bs";
 import Image from "next/image";
 
-export const Experience = () => {
+export const ExperienceTeaser = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [activeWorkExperience, setActiveWorkExperience] = useState(
     workExperience[0],
   );
+
   return (
-    <div className=" max-w-5xl mx-auto px-8">
+    <div className="max-w-5xl mx-auto px-8">
       <h1 className="text-2xl md:text-3xl text-white font-bold max-w-5xl mx-auto mt-20 md:mt-40">
         Expérience professionnelle
       </h1>
-      <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-4 leading-loose tracking-wide ">
+
+      <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-4 leading-loose tracking-wide">
         Des rôles et des mandats centrés sur la livraison: améliorer l’existant,
         automatiser ce qui ralentit, et rendre les systèmes plus fiables.
       </p>
+
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-20 max-w-2xl mx-auto">
-        <div className="flex flex-row md:flex-col relative overflow-x-auto md:overflow-x-visible">
-          <div className="absolute -left-6 w-px h-full bg-zinc-800 overflow-hidden">
-            <Beam showBeam={true} className={`-left-0`} />
+        {/* Liste employeurs (fix mobile) */}
+        <div className="flex flex-row md:flex-col gap-2 md:gap-0 relative overflow-x-auto md:overflow-x-visible pb-2 md:pb-0 snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+          {/* Beam seulement sur desktop */}
+          <div className="hidden md:block absolute -left-6 w-px h-full bg-zinc-800 overflow-hidden">
+            <Beam showBeam={true} className="-left-0" />
           </div>
 
           {workExperience.map((exp, idx) => (
             <div
               key={`exp-${idx}`}
-              className="relative my-2"
+              className="relative md:my-2 snap-start"
               onMouseEnter={() => setHoveredIndex(idx)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <AnimatePresence>
                 {hoveredIndex === idx && (
                   <motion.span
-                    className="absolute inset-0 h-full w-full bg-zinc-800  rounded-md"
+                    className="absolute inset-0 h-full w-full bg-zinc-800 rounded-md"
                     layoutId="hoverBackground"
                     initial={{ opacity: 0 }}
                     animate={{
@@ -53,10 +58,11 @@ export const Experience = () => {
                   />
                 )}
               </AnimatePresence>
+
               <button
                 onClick={() => setActiveWorkExperience(exp)}
                 className={clsx(
-                  "px-4 py-2 text-zinc-400 relative z-20 min-w-28 w-full text-left rounded-md flex flex-row space-x-2 items-center group",
+                  "px-3 py-2 text-zinc-300 relative z-20 rounded-md flex flex-row gap-2 items-center group w-auto shrink-0 min-w-[11rem] md:min-w-0 md:w-full md:text-left",
                   activeWorkExperience?.company === exp.company
                     ? "bg-zinc-800"
                     : null,
@@ -71,12 +77,17 @@ export const Experience = () => {
                     className="object-cover"
                   />
                 </div>
-                <span>{exp.company}</span>
+
+                <span className="truncate" title={exp.company}>
+                  {exp.company}
+                </span>
               </button>
             </div>
           ))}
         </div>
-        <div className="md:pl-10  flex-1">
+
+        {/* Panneau détails (inchangé) */}
+        <div className="md:pl-10 flex-1">
           <div className="flex flex-col space-y-4">
             <AnimatePresence>
               <motion.div
@@ -103,6 +114,7 @@ export const Experience = () => {
                   {moment(activeWorkExperience?.startDate).format("MMM YYYY")} -{" "}
                   {moment(activeWorkExperience?.endDate).format("MMM YYYY")}
                 </div>
+
                 <p className="text-zinc-400 text-sm">
                   {activeWorkExperience?.location}
                 </p>
