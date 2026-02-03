@@ -67,3 +67,31 @@ export const technologiesSections = [
 export const technologies: TechnologieItem[] = technologiesSections.flatMap(
   (s) => [...s.items],
 );
+
+// --- TEASER: sélection explicite ---
+export const technologiesTeaserSelection = [
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "C#",
+  ".NET",
+  "SQL Server",
+  "Azure",
+  "Tailwind CSS",
+  "Python",
+  "GitHub",
+  "SolidWorks",
+] as const;
+
+// Map avec clé string
+const teaserOrder = new Map<string, number>(
+  technologiesTeaserSelection.map((label, i) => [label, i]),
+);
+
+export const technologiesTeaser: TechnologieItem[] = technologies
+  .filter((t) => teaserOrder.has(t.label))
+  .sort(
+    (a, b) =>
+      (teaserOrder.get(a.label) ?? 999) - (teaserOrder.get(b.label) ?? 999),
+  );

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { technologiesSections } from "@/constants/technologies";
+import { technologiesTeaser } from "@/constants/technologies";
 import { TechLogo } from "@/components/TechLogo";
 
 type TechItem = { file: string; label: string };
@@ -11,15 +11,17 @@ export function TechnologiesTeaser({
 }: {
   embedded?: boolean;
 }) {
-  const items: TechItem[] = technologiesSections
-    .flatMap((s) => s.items as ReadonlyArray<TechItem>)
-    .slice(0, MAX_ITEMS);
+  // On utilise la sélection explicite + tri du fichier constants
+  const items: TechItem[] = (technologiesTeaser as TechItem[]).slice(
+    0,
+    MAX_ITEMS,
+  );
 
   const Wrapper = embedded ? "div" : "section";
   const wrapperClass = embedded ? "" : "max-w-5xl mx-auto px-8 mt-40";
 
   const gridClass = embedded
-    ? "mt-6 grid grid-cols-2 gap-4 md:grid-cols-3" // moins de colonnes => cartes plus larges
+    ? "mt-6 grid grid-cols-2 gap-4 md:grid-cols-3"
     : "mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6";
 
   return (
