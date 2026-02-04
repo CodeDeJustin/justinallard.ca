@@ -160,7 +160,7 @@ export default function ContactForm() {
                 "disabled:cursor-not-allowed disabled:opacity-60",
               )}
             >
-              {isPending ? "Submitting..." : "Submit"}
+              {isPending ? "Envoi en cours..." : "Envoyer"}
             </button>
 
             {state.status !== "idle" && (
