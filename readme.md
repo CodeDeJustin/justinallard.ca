@@ -7,7 +7,7 @@ Objectif : une vitrine rapide, élégante et maintenable pour profil, projets, c
 
 - Pages : Accueil, Profil, Projets, Certifications, Contact, Matériel, Technologies, Blogues
 - Blogues en MDX avec génération statique (SSG)
-- UI basée sur Tailwind + composants (incluant Aceternity UI Pro, adapté au contenu du site)
+- UI basée sur Tailwind + composants
 
 ## Stack
 

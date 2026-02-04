@@ -30,7 +30,7 @@ function Blog({
       href={`/blogues/${article.slug}`}
       onMouseEnter={() => setHoveredIndex(idx)}
       onMouseLeave={() => setHoveredIndex(null)}
-      className="relative block rounded-2xl md:p-8 overflow-hidden"
+      className="relative block rounded-2xl p-6 md:p-8 overflow-hidden"
     >
       <AnimatePresence>
         {hoveredIndex === idx && (

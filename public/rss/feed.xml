@@ -1,35 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-    <channel>
-        <title>Your Name</title>
-        <link>https://devpro.aceternity.com</link>
-        <description>Your blog desc</description>
-        <lastBuildDate>Mon, 20 Mar 2023 10:49:40 GMT</lastBuildDate>
-        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-        <generator>https://github.com/jpmonette/feed</generator>
-        <image>
-            <title>Your Name</title>
-            <url>https://devpro.aceternity.com/coffee-icon.ico</url>
-            <link>https://devpro.aceternity.com</link>
-        </image>
-        <copyright>All rights reserved 2023</copyright>
-        <item>
-            <title><![CDATA[What is a website template]]></title>
-            <link>https://devpro.aceternity.com/articles/what-is-a-website-template</link>
-            <guid>https://devpro.aceternity.com/articles/what-is-a-website-template</guid>
-            <pubDate>Mon, 28 Nov 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[A website template is a pre-designed website that can be customized to suit your needs. In this post, we’ll take a look at what a website template is and why it can be a great creative outlet for writers]]></description>
-            <content:encoded><![CDATA[hi]]></content:encoded>
-            <author>yourname@youremail.com (Your Name)</author>
-        </item>
-        <item>
-            <title><![CDATA[What is a blog anyway]]></title>
-            <link>https://devpro.aceternity.com/articles/what-is-a-blog-anyway</link>
-            <guid>https://devpro.aceternity.com/articles/what-is-a-blog-anyway</guid>
-            <pubDate>Fri, 02 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[A blog is a website that is updated regularly with new content. It is a great way to share your thoughts and ideas with the world. In this blog post, we will discuss what a blog is and how to create one.]]></description>
-            <content:encoded><![CDATA[hi]]></content:encoded>
-            <author>yourname@youremail.com (Your Name)</author>
-        </item>
-    </channel>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss
+  version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+>
+  <channel>
+    <title><![CDATA[Justin Allard — Blog]]></title>
+    <link>https://justinallard.ca/blogues</link>
+    <atom:link href="https://justinallard.ca/rss/feed.xml" rel="self" type="application/rss+xml" />
+    <description><![CDATA[Articles sur le développement, la gestion de produit/projet et le travail en équipe (avec une dose de réalité).]]></description>
+    <language>fr-CA</language>
+    <lastBuildDate>Fri, 23 May 2025 00:00:00 GMT</lastBuildDate>
+
+    <image>
+      <url>https://justinallard.ca/favicon.ico</url>
+      <title><![CDATA[Justin Allard — Blog]]></title>
+      <link>https://justinallard.ca/blogues</link>
+    </image>
+
+    <item>
+      <title><![CDATA[« C’est pour hier » : chronique d’une urgence imaginaire]]></title>
+      <link>https://justinallard.ca/blogues/cest-pour-hier-chronique-d-une-urgence-imaginaire-79e71e77d7ae</link>
+      <guid isPermaLink="true">https://justinallard.ca/blogues/cest-pour-hier-chronique-d-une-urgence-imaginaire-79e71e77d7ae</guid>
+      <pubDate>Fri, 23 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[Quand tout est “urgent”, plus rien ne l’est. Petite chronique d’une urgence fabriquée et de ses dégâts collatéraux.]]></description>
+      <content:encoded><![CDATA[<p><a href="https://justinallard.ca/blogues/cest-pour-hier-chronique-d-une-urgence-imaginaire-79e71e77d7ae">Lire l’article</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[Culture d’entreprise : le terreau pour cultiver vos talents… ou les faire filer au plus vite !]]></title>
+      <link>https://justinallard.ca/blogues/culture-dentreprise-le-terreau-pour-cultiver-vos-talents-ou-les-faire-filer-au-plus-vite-ab31e8495e7a</link>
+      <guid isPermaLink="true">https://justinallard.ca/blogues/culture-dentreprise-le-terreau-pour-cultiver-vos-talents-ou-les-faire-filer-au-plus-vite-ab31e8495e7a</guid>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[La culture d’entreprise peut faire grandir tes talents… ou les pousser vers la sortie. Souvent sans même s’en rendre compte.]]></description>
+      <content:encoded><![CDATA[<p><a href="https://justinallard.ca/blogues/culture-dentreprise-le-terreau-pour-cultiver-vos-talents-ou-les-faire-filer-au-plus-vite-ab31e8495e7a">Lire l’article</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[Construisez une équipe si forte que quiconque la voit ne sache pas qui est le boss]]></title>
+      <link>https://justinallard.ca/blogues/construisez-une-equipe-si-forte-que-quiconque-la-voit-ne-sache-pas-qui-est-le-boss-29c4a32d40b4</link>
+      <guid isPermaLink="true">https://justinallard.ca/blogues/construisez-une-equipe-si-forte-que-quiconque-la-voit-ne-sache-pas-qui-est-le-boss-29c4a32d40b4</guid>
+      <pubDate>Mon, 28 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Former une équipe autonome et solide, où le leadership n’a pas besoin d’être affiché en permanence pour exister.]]></description>
+      <content:encoded><![CDATA[<p><a href="https://justinallard.ca/blogues/construisez-une-equipe-si-forte-que-quiconque-la-voit-ne-sache-pas-qui-est-le-boss-29c4a32d40b4">Lire l’article</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[Réunions à gogo : quand trop, c’est trop]]></title>
+      <link>https://justinallard.ca/blogues/reunions-a-gogo-quand-trop-cest-trop-2ff9d65a80d0</link>
+      <guid isPermaLink="true">https://justinallard.ca/blogues/reunions-a-gogo-quand-trop-cest-trop-2ff9d65a80d0</guid>
+      <pubDate>Mon, 23 Sep 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Quand les réunions deviennent le travail. Symptômes, causes fréquentes et pistes pour reprendre le contrôle.]]></description>
+      <content:encoded><![CDATA[<p><a href="https://justinallard.ca/blogues/reunions-a-gogo-quand-trop-cest-trop-2ff9d65a80d0">Lire l’article</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[Qu’est-ce qui distingue vraiment les équipes Scrum des autres équipes]]></title>
+      <link>https://justinallard.ca/blogues/quest-ce-qui-distingue-vraiment-les-equipes-scrum-des-autres-equipes-c98598a788d7</link>
+      <guid isPermaLink="true">https://justinallard.ca/blogues/quest-ce-qui-distingue-vraiment-les-equipes-scrum-des-autres-equipes-c98598a788d7</guid>
+      <pubDate>Sun, 25 Aug 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Scrum n’est pas une checklist. Ce qui fait la différence entre Scrum vivant et Scrum de façade.]]></description>
+      <content:encoded><![CDATA[<p><a href="https://justinallard.ca/blogues/quest-ce-qui-distingue-vraiment-les-equipes-scrum-des-autres-equipes-c98598a788d7">Lire l’article</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[Scrum sans confiance : 10 raisons pour lesquelles ça va vraiment mal se passer]]></title>
+      <link>https://justinallard.ca/blogues/scrum-sans-confiance-10-raisons-pour-lesquelles-ca-va-vraiment-mal-se-passer-a91dbdf1381f</link>
+      <guid isPermaLink="true">https://justinallard.ca/blogues/scrum-sans-confiance-10-raisons-pour-lesquelles-ca-va-vraiment-mal-se-passer-a91dbdf1381f</guid>
+      <pubDate>Sun, 25 Aug 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Sans confiance, Scrum devient une usine à friction. Dix raisons concrètes (et douloureusement réalistes).]]></description>
+      <content:encoded><![CDATA[<p><a href="https://justinallard.ca/blogues/scrum-sans-confiance-10-raisons-pour-lesquelles-ca-va-vraiment-mal-se-passer-a91dbdf1381f">Lire l’article</a></p>]]></content:encoded>
+    </item>
+
+    <item>
+      <title><![CDATA[Le leadership au service des autres]]></title>
+      <link>https://justinallard.ca/blogues/le-leadership-au-service-des-autres-b2f4c48a793b</link>
+      <guid isPermaLink="true">https://justinallard.ca/blogues/le-leadership-au-service-des-autres-b2f4c48a793b</guid>
+      <pubDate>Thu, 22 Aug 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[Le leadership-serviteur: servir l’équipe, enlever les obstacles, et maximiser l’impact collectif.]]></description>
+      <content:encoded><![CDATA[<p><a href="https://justinallard.ca/blogues/le-leadership-au-service-des-autres-b2f4c48a793b">Lire l’article</a></p>]]></content:encoded>
+    </item>
+  </channel>
 </rss>

@@ -1,35 +1,69 @@
 {
   "version": "https://jsonfeed.org/version/1",
-  "title": "Your Name",
-  "home_page_url": "https://devpro.aceternity.com",
-  "feed_url": "https://devpro.aceternity.com/rss/feed.json",
-  "description": "Your blog desc",
-  "icon": "https://devpro.aceternity.com/coffee-icon.ico",
+  "title": "Justin Allard — Blog",
+  "home_page_url": "https://justinallard.ca/blogues",
+  "feed_url": "https://justinallard.ca/rss/feed.json",
+  "description": "Articles sur le développement, la gestion de produit/projet et le travail en équipe (avec une dose de réalité).",
+  "icon": "https://justinallard.ca/favicon.ico",
   "author": {
-    "name": "Your Name"
+    "name": "Justin Allard"
   },
   "items": [
     {
-      "id": "https://devpro.aceternity.com/articles/what-is-a-website-template",
-      "content_html": "hi",
-      "url": "https://devpro.aceternity.com/articles/what-is-a-website-template",
-      "title": "What is a website template",
-      "summary": "A website template is a pre-designed website that can be customized to suit your needs. In this post, we’ll take a look at what a website template is and why it can be a great creative outlet for writers",
-      "date_modified": "2022-11-28T00:00:00.000Z",
-      "author": {
-        "name": "Your Name"
-      }
+      "id": "https://justinallard.ca/blogues/cest-pour-hier-chronique-d-une-urgence-imaginaire-79e71e77d7ae",
+      "url": "https://justinallard.ca/blogues/cest-pour-hier-chronique-d-une-urgence-imaginaire-79e71e77d7ae",
+      "title": "« C’est pour hier » : chronique d’une urgence imaginaire",
+      "summary": "Quand tout est “urgent”, plus rien ne l’est. Petite chronique d’une urgence fabriquée et de ses dégâts collatéraux.",
+      "content_html": "<p><a href=\"https://justinallard.ca/blogues/cest-pour-hier-chronique-d-une-urgence-imaginaire-79e71e77d7ae\">Lire l’article</a></p>",
+      "author": { "name": "Justin Allard" }
     },
     {
-      "id": "https://devpro.aceternity.com/articles/what-is-a-blog-anyway",
-      "content_html": "hi",
-      "url": "https://devpro.aceternity.com/articles/what-is-a-blog-anyway",
-      "title": "What is a blog anyway",
-      "summary": "A blog is a website that is updated regularly with new content. It is a great way to share your thoughts and ideas with the world. In this blog post, we will discuss what a blog is and how to create one.",
-      "date_modified": "2022-09-02T00:00:00.000Z",
-      "author": {
-        "name": "Your Name"
-      }
+      "id": "https://justinallard.ca/blogues/culture-dentreprise-le-terreau-pour-cultiver-vos-talents-ou-les-faire-filer-au-plus-vite-ab31e8495e7a",
+      "url": "https://justinallard.ca/blogues/culture-dentreprise-le-terreau-pour-cultiver-vos-talents-ou-les-faire-filer-au-plus-vite-ab31e8495e7a",
+      "title": "Culture d’entreprise : le terreau pour cultiver vos talents… ou les faire filer au plus vite !",
+      "summary": "La culture d’entreprise peut faire grandir tes talents… ou les pousser vers la sortie. Souvent sans même s’en rendre compte.",
+      "content_html": "<p><a href=\"https://justinallard.ca/blogues/culture-dentreprise-le-terreau-pour-cultiver-vos-talents-ou-les-faire-filer-au-plus-vite-ab31e8495e7a\">Lire l’article</a></p>",
+      "author": { "name": "Justin Allard" }
+    },
+    {
+      "id": "https://justinallard.ca/blogues/construisez-une-equipe-si-forte-que-quiconque-la-voit-ne-sache-pas-qui-est-le-boss-29c4a32d40b4",
+      "url": "https://justinallard.ca/blogues/construisez-une-equipe-si-forte-que-quiconque-la-voit-ne-sache-pas-qui-est-le-boss-29c4a32d40b4",
+      "title": "Construisez une équipe si forte que quiconque la voit ne sache pas qui est le boss",
+      "summary": "Former une équipe autonome et solide, où le leadership n’a pas besoin d’être affiché en permanence pour exister.",
+      "content_html": "<p><a href=\"https://justinallard.ca/blogues/construisez-une-equipe-si-forte-que-quiconque-la-voit-ne-sache-pas-qui-est-le-boss-29c4a32d40b4\">Lire l’article</a></p>",
+      "author": { "name": "Justin Allard" }
+    },
+    {
+      "id": "https://justinallard.ca/blogues/reunions-a-gogo-quand-trop-cest-trop-2ff9d65a80d0",
+      "url": "https://justinallard.ca/blogues/reunions-a-gogo-quand-trop-cest-trop-2ff9d65a80d0",
+      "title": "Réunions à gogo : quand trop, c’est trop",
+      "summary": "Quand les réunions deviennent le travail. Symptômes, causes fréquentes et pistes pour reprendre le contrôle.",
+      "content_html": "<p><a href=\"https://justinallard.ca/blogues/reunions-a-gogo-quand-trop-cest-trop-2ff9d65a80d0\">Lire l’article</a></p>",
+      "author": { "name": "Justin Allard" }
+    },
+    {
+      "id": "https://justinallard.ca/blogues/quest-ce-qui-distingue-vraiment-les-equipes-scrum-des-autres-equipes-c98598a788d7",
+      "url": "https://justinallard.ca/blogues/quest-ce-qui-distingue-vraiment-les-equipes-scrum-des-autres-equipes-c98598a788d7",
+      "title": "Qu’est-ce qui distingue vraiment les équipes Scrum des autres équipes",
+      "summary": "Scrum n’est pas une checklist. Ce qui fait la différence entre Scrum vivant et Scrum de façade.",
+      "content_html": "<p><a href=\"https://justinallard.ca/blogues/quest-ce-qui-distingue-vraiment-les-equipes-scrum-des-autres-equipes-c98598a788d7\">Lire l’article</a></p>",
+      "author": { "name": "Justin Allard" }
+    },
+    {
+      "id": "https://justinallard.ca/blogues/scrum-sans-confiance-10-raisons-pour-lesquelles-ca-va-vraiment-mal-se-passer-a91dbdf1381f",
+      "url": "https://justinallard.ca/blogues/scrum-sans-confiance-10-raisons-pour-lesquelles-ca-va-vraiment-mal-se-passer-a91dbdf1381f",
+      "title": "Scrum sans confiance : 10 raisons pour lesquelles ça va vraiment mal se passer",
+      "summary": "Sans confiance, Scrum devient une usine à friction. Dix raisons concrètes (et douloureusement réalistes).",
+      "content_html": "<p><a href=\"https://justinallard.ca/blogues/scrum-sans-confiance-10-raisons-pour-lesquelles-ca-va-vraiment-mal-se-passer-a91dbdf1381f\">Lire l’article</a></p>",
+      "author": { "name": "Justin Allard" }
+    },
+    {
+      "id": "https://justinallard.ca/blogues/le-leadership-au-service-des-autres-b2f4c48a793b",
+      "url": "https://justinallard.ca/blogues/le-leadership-au-service-des-autres-b2f4c48a793b",
+      "title": "Le leadership au service des autres",
+      "summary": "Le leadership-serviteur: servir l’équipe, enlever les obstacles, et maximiser l’impact collectif.",
+      "content_html": "<p><a href=\"https://justinallard.ca/blogues/le-leadership-au-service-des-autres-b2f4c48a793b\">Lire l’article</a></p>",
+      "author": { "name": "Justin Allard" }
     }
   ]
 }

@@ -53,7 +53,7 @@ export default function ContactForm() {
           <ContactLinks />
         </div>
 
-        {/* Droite (Aceternity: identique) */}
+        {/* Droite */}
         <div className="relative mx-auto flex w-full max-w-2xl flex-col items-start gap-4 overflow-hidden rounded-3xl bg-gradient-to-b from-gray-100 to-gray-200 p-4 sm:p-10 dark:from-neutral-900 dark:to-neutral-950">
           <Grid size={20} pattern={gridPattern} />
 
@@ -62,7 +62,7 @@ export default function ContactForm() {
             action={formAction}
             className="relative z-20 w-full"
           >
-            {/* Honeypot anti-spam (garde `company` pour ton action) */}
+            {/* Honeypot anti-spam  */}
             <div className="hidden">
               <label htmlFor="company_hp">
                 Company
