@@ -37,11 +37,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: ${{ steps.detect.outputs.manager }}
-          cache-dependency-path: |
-            pnpm-lock.yaml
-            yarn.lock
-            package-lock.json
 
       - name: Setup pnpm via Corepack
         if: ${{ steps.detect.outputs.manager == 'pnpm' }}
@@ -49,6 +44,17 @@ jobs:
           corepack enable
           corepack prepare pnpm@latest --activate
           pnpm --version
+
+      - name: Resolve pnpm store path
+        if: ${{ steps.detect.outputs.manager == 'pnpm' }}
+        run: echo "PNPM_STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_ENV"
+
+      - name: Cache pnpm store
+        if: ${{ steps.detect.outputs.manager == 'pnpm' }}
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.PNPM_STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('pnpm-lock.yaml') }}
 
       - name: Enable Corepack for yarn
         if: ${{ steps.detect.outputs.manager == 'yarn' }}
