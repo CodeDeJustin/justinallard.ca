@@ -1,5 +1,7 @@
 # justinallard.ca
 
+[![CI](https://github.com/justinallard/justinallard.ca/actions/workflows/ci.yml/badge.svg)](https://github.com/justinallard/justinallard.ca/actions/workflows/ci.yml)
+
 Site portfolio personnel de Justin Allard, construit avec Next.js (App Router), TypeScript et Tailwind CSS.
 Objectif : une vitrine rapide, élégante et maintenable pour profil, projets, certifications et articles.
 
