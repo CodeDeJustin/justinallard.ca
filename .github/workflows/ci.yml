@@ -43,8 +43,15 @@ jobs:
             yarn.lock
             package-lock.json
 
-      - name: Enable Corepack
-        if: ${{ steps.detect.outputs.manager != 'npm' }}
+      - name: Setup pnpm via Corepack
+        if: ${{ steps.detect.outputs.manager == 'pnpm' }}
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+          pnpm --version
+
+      - name: Enable Corepack for yarn
+        if: ${{ steps.detect.outputs.manager == 'yarn' }}
         run: corepack enable
 
       - name: Install dependencies
