@@ -5,7 +5,9 @@ import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 export function CertificationCard({ c }: { c: Certification }) {
   const status = c.status ?? "actif";
-  const credlyUrl = c.proofUrl ?? userMediaLink.credly;
+  const credlyHref = c.proofUrl ?? userMediaLink.credly;
+  const credlyBtnClass =
+    "text-zinc-200 border border-zinc-700 bg-zinc-900 px-4 py-2 rounded-lg hover:border-zinc-600 hover:bg-zinc-800/[0.8] transition text-sm";
 
   return (
     <CardSpotlight className="group rounded-2xl border border-zinc-800 bg-zinc-800 p-5 hover:bg-zinc-950/60 transition">
@@ -55,14 +57,10 @@ export function CertificationCard({ c }: { c: Certification }) {
 
       <div className="mt-3 flex flex-wrap gap-3">
         <a
-          href={c.proofUrl ? credlyUrl : userMediaLink.credly}
+          href={credlyHref}
           target="_blank"
-          rel="noreferrer"
-          className={
-            c.proofUrl
-              ? "text-zinc-200 border border-zinc-700 bg-zinc-900 px-4 py-2 rounded-lg hover:border-zinc-600 hover:bg-zinc-800/[0.8] transition text-sm"
-              : "text-zinc-300 border border-zinc-800 bg-zinc-950/40 px-4 py-2 rounded-lg hover:border-zinc-700 hover:bg-zinc-900/30 transition text-sm"
-          }
+          rel="noopener noreferrer"
+          className={credlyBtnClass}
         >
           {c.proofUrl ? "Voir sur Credly" : "Profil Credly"}
         </a>
@@ -71,7 +69,7 @@ export function CertificationCard({ c }: { c: Certification }) {
           <a
             href={c.certificatePdf}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="text-zinc-200 border border-zinc-700 bg-zinc-900 px-4 py-2 rounded-lg hover:border-zinc-600 hover:bg-zinc-800/[0.8] transition text-sm"
           >
             Voir le certificat (PDF)
