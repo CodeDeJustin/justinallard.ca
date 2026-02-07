@@ -36,10 +36,6 @@ export function CertificationsTeaser() {
           const isInProgress = cert.status === "en_cours";
           const statusLabel = isInProgress ? "En cours" : "Actif";
 
-          const statusPillClass = isInProgress
-            ? "border-yellow-500/30 bg-yellow-500/10 text-yellow-400"
-            : "border-emerald-500/30 bg-emerald-500/10 text-emerald-400";
-
           return (
             <a
               key={cert.short}

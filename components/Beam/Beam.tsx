@@ -1,50 +1,54 @@
 "use client";
-import clsx from "clsx";
 import React, { useEffect, useRef } from "react";
 import { twMerge } from "tailwind-merge";
 import styles from "./style.module.css";
 
-const Beam = ({ showBeam, className }: any) => {
-  const cn = (...values: any) => clsx(twMerge(values));
-  const meteorRef = useRef<any>(null);
+type BeamProps = {
+  showBeam: boolean;
+  className?: string;
+};
 
-  useEffect(() => {
-    if (showBeam) {
-      const meteor = meteorRef.current;
+const Beam = ({ showBeam, className }: BeamProps) => {
+  const meteorRef = useRef<HTMLSpanElement | null>(null);
 
-      meteor.addEventListener("animationend", () => {
-        meteor.style.visibility = "hidden";
-        const animationDelay = Math.floor(Math.random() * (3 - 0) + 0);
-        const animationDuration = Math.floor(Math.random() * (4 - 0) + 0);
-        const meteorWidth = Math.floor(Math.random() * (150 - 80) + 80);
-        meteor.style.setProperty("--meteor-delay", `${animationDelay}s`);
-        meteor.style.setProperty("--meteor-duration", `${animationDuration}s`);
-        meteor.style.setProperty("--meteor-width", `${meteorWidth}px`);
-
-        restartAnimation();
-      });
-
-      meteor.addEventListener("animationstart", () => {
-        meteor.style.visibility = "visible";
-      });
-    }
-
-    return () => {
-      if (showBeam) {
-        const meteor = meteorRef.current;
-        if (meteor) {
-          meteor.removeEventListener("animationend", () => {});
-          meteor.removeEventListener("animationstart", () => {});
-        }
-      }
-    };
-  }, []);
   const restartAnimation = () => {
     const meteor = meteorRef.current;
+    if (!meteor) return;
+
     meteor.style.animation = "none";
     void meteor.offsetWidth;
-    meteor.style.animation = null;
+    meteor.style.animation = "";
   };
+
+  useEffect(() => {
+    if (!showBeam) return;
+    const meteor = meteorRef.current;
+    if (!meteor) return;
+
+    const handleAnimationEnd = () => {
+      meteor.style.visibility = "hidden";
+      const animationDelay = Math.floor(Math.random() * 3);
+      const animationDuration = Math.floor(Math.random() * 4);
+      const meteorWidth = Math.floor(Math.random() * (150 - 80) + 80);
+      meteor.style.setProperty("--meteor-delay", `${animationDelay}s`);
+      meteor.style.setProperty("--meteor-duration", `${animationDuration}s`);
+      meteor.style.setProperty("--meteor-width", `${meteorWidth}px`);
+
+      restartAnimation();
+    };
+
+    const handleAnimationStart = () => {
+      meteor.style.visibility = "visible";
+    };
+
+    meteor.addEventListener("animationend", handleAnimationEnd);
+    meteor.addEventListener("animationstart", handleAnimationStart);
+
+    return () => {
+      meteor.removeEventListener("animationend", handleAnimationEnd);
+      meteor.removeEventListener("animationstart", handleAnimationStart);
+    };
+  }, [showBeam]);
 
   return (
     showBeam && (

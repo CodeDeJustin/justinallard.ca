@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import MDXComponents from "@/components/MDXComponents";
 
 const MDXRemote = dynamic(
@@ -8,6 +9,10 @@ const MDXRemote = dynamic(
   { ssr: false },
 );
 
-export function RenderMDX({ mdxSource }: { mdxSource: any }) {
+export function RenderMDX({
+  mdxSource,
+}: {
+  mdxSource: MDXRemoteSerializeResult;
+}) {
   return <MDXRemote components={MDXComponents} {...mdxSource} />;
 }

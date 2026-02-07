@@ -4,8 +4,26 @@ import Image from "next/image";
 import { formatDate } from "@/lib/formatDate";
 import { Prose } from "@/components/Prose";
 import { Container } from "@/components/Container";
+import type { ReactNode } from "react";
 
-export function BlogLayout({ children, meta, isRssFeed = false }: any) {
+type BlogMeta = {
+  title: string;
+  date: string;
+  author?: string;
+  image?: string;
+} & Record<string, unknown>;
+
+type BlogLayoutProps = {
+  children: ReactNode;
+  meta: BlogMeta;
+  isRssFeed?: boolean;
+};
+
+export function BlogLayout({
+  children,
+  meta,
+  isRssFeed = false,
+}: BlogLayoutProps) {
   if (isRssFeed) {
     return children;
   }

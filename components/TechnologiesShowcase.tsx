@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { technologiesSections } from "@/constants/technologies";
 import { TechLogo } from "@/components/TechLogo";
 import { TechnologiesIconCloud } from "@/app/technologies/_components/TechnologiesIconCloud";

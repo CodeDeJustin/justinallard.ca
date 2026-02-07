@@ -2,15 +2,23 @@
 import { CustomLink } from "@/components/CustomLink";
 import { Logo } from "@/components/Logo";
 import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 
-export const DesktopNav = ({ navItems }: any) => {
+type NavItem = {
+  name: string;
+  link: string;
+};
+
+type DesktopNavProps = {
+  navItems: NavItem[];
+};
+
+export const DesktopNav = ({ navItems }: DesktopNavProps) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <div className="flex flex-row space-x-8 items-center antialiased border px-4 py-2 rounded-2xl border-zinc-700/60 bg-zinc-800 ">
       <Logo />
-      {navItems.map((navItem: any, idx: number) => (
+      {navItems.map((navItem, idx: number) => (
         <CustomLink
           key={`link=${idx}`}
           href={navItem.link}

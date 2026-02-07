@@ -23,7 +23,7 @@ export const timeline: TimelineItem[] = [
   {
     year: 2023,
     points: [
-      "Développeur Web et mobile chez Binder. Développement d'une nouvelle application mobile",
+      "Développeur Web et mobile (stage) chez Binder. Développement d'une nouvelle application mobile",
       "Authentification sur app mobile OAuth SvelteKit et conception de l'interface utilisateur.",
       "UI sur Figma, multilingue avec Inlang, documentation technique.",
     ],

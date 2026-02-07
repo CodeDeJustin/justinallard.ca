@@ -8,7 +8,16 @@ import { CustomLink } from "../CustomLink";
 
 const EASE: [number, number, number, number] = [0.4, 0, 0.2, 1];
 
-export const MobileNav = ({ navItems }: any) => {
+type NavItem = {
+  name: string;
+  link: string;
+};
+
+type MobileNavProps = {
+  navItems: NavItem[];
+};
+
+export const MobileNav = ({ navItems }: MobileNavProps) => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -59,7 +68,7 @@ export const MobileNav = ({ navItems }: any) => {
               onClick={() => setOpen(false)}
             />
 
-            {navItems.map((navItem: any, idx: number) => (
+            {navItems.map((navItem, idx: number) => (
               <CustomLink
                 key={`link=${idx}`}
                 href={navItem.link}

@@ -17,7 +17,6 @@ export const LinkPreview = ({
   const width = 200;
   const height = 125;
   const quality = 50;
-  const layout = "fixed";
 
   // Simplifies things by encoding our microlink params into a query string.
   const params = encode({
@@ -65,7 +64,7 @@ export const LinkPreview = ({
               width={width}
               height={height}
               quality={quality}
-              priority={true}
+              preload
               alt="Preview Link"
             />
           </div>
@@ -107,7 +106,7 @@ export const LinkPreview = ({
                 height={height}
                 quality={quality}
                 alt="Preview Link"
-                priority={true}
+                preload
                 className="rounded-lg"
               />
             </a>

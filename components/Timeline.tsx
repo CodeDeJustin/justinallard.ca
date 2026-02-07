@@ -1,5 +1,4 @@
-import { timeline } from "@/constants/timeline";
-import React from "react";
+import { timeline, type TimelineItem } from "@/constants/timeline";
 import { HiOutlineCheckCircle } from "react-icons/hi2";
 import Beam from "./Beam/Beam";
 
@@ -9,7 +8,7 @@ export const Timeline = () => {
       <div className="absolute h-full w-[4px] bg-gradient-to-b from-transparent via-brand-500 to:transparent  -left-4 md:-left-10">
         <Beam showBeam={true} className={`left-1`} />
       </div>
-      {timeline.map((item: any, idx: number) => (
+      {timeline.map((item: TimelineItem, idx: number) => (
         <div key={`timeline-item-${idx}`} className="border-b border-zinc-800">
           <h1 className="text-xl font-bold text-zinc-200 my-8 relative">
             <div className="h-3 md:h-4 w-3 md:w-4 border-2 border-brand-500 bg-zinc-800 rounded-full absolute -left-[20px] md:-left-[46px] top-2 md:top-1" />
@@ -17,7 +16,7 @@ export const Timeline = () => {
           </h1>
 
           <div className="mb-8">
-            {item.points.map((point: any, idx: number) => (
+            {item.points.map((point: string, idx: number) => (
               <div
                 key={`timeline-item-${idx}`}
                 className="flex flex-row space-x-2 items-start my-2"

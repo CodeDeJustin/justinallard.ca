@@ -8,10 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogsPage() {
-  const blogs = (await getAllBlogs()).map((b: any) => {
-    const { component, ...meta } = b;
-    return meta;
-  });
+  const blogs = await getAllBlogs();
 
   return (
     <Container>

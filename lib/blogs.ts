@@ -5,25 +5,76 @@ import fs from "fs";
 import matter from "gray-matter";
 import path from "path";
 import readingTime from "reading-time";
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 
-async function importBlog(blogFileNames: string) {
+type JsonObject = Record<string, unknown>;
+type ContentType = "blogs";
+
+export type BlogMetadata = JsonObject & {
+  title: string;
+  date: string;
+  description: string;
+  image?: string;
+  author?: string;
+  canonicalUrl?: string;
+};
+
+export type BlogSummary = BlogMetadata & {
+  slug: string;
+};
+
+export type BlogFrontMatter = BlogSummary & {
+  wordCount: number;
+  readingTime: ReturnType<typeof readingTime>;
+};
+
+type FileBySlugResult = {
+  mdxSource: MDXRemoteSerializeResult;
+  frontMatter: BlogFrontMatter;
+};
+
+type FrontMatterEntry = JsonObject & {
+  slug: string;
+};
+
+const isRecord = (value: unknown): value is JsonObject =>
+  typeof value === "object" && value !== null && !Array.isArray(value);
+
+const parseMetadata = (raw: string, context: string): BlogMetadata => {
+  const parsed: unknown = JSON.parse(raw);
+  if (!isRecord(parsed)) {
+    throw new Error(`${context}: metadata.json must be a JSON object`);
+  }
+
+  if (
+    typeof parsed.title !== "string" ||
+    typeof parsed.date !== "string" ||
+    typeof parsed.description !== "string"
+  ) {
+    throw new Error(
+      `${context}: metadata.json must include string fields 'title', 'date', and 'description'`,
+    );
+  }
+
+  return parsed as BlogMetadata;
+};
+
+async function importBlog(blogFileNames: string): Promise<BlogSummary> {
   const isIndex = /\/index\.mdx$/.test(blogFileNames);
   const relativeDir = isIndex
     ? path.dirname(blogFileNames)
     : blogFileNames.replace(/\.mdx$/, "");
   const absoluteDir = path.join(process.cwd(), "content/blogs", relativeDir);
   const metadataPath = path.join(absoluteDir, "metadata.json");
-  let meta: any = {};
+  const context = `Failed to load metadata.json for blog '${relativeDir}'`;
+
+  let meta: BlogMetadata;
   try {
     const raw = await readFile(metadataPath, "utf8");
-    meta = JSON.parse(raw);
+    meta = parseMetadata(raw, context);
   } catch (err) {
-    throw new Error(
-      `Failed to load metadata.json for blog '${relativeDir}': ${
-        (err as Error).message
-      }`,
-    );
+    throw new Error(`${context}: ${(err as Error).message}`);
   }
 
   return {
@@ -32,7 +83,7 @@ async function importBlog(blogFileNames: string) {
   };
 }
 
-export async function getAllBlogs() {
+export async function getAllBlogs(): Promise<BlogSummary[]> {
   const blogFileNames = await glob(["*.mdx", "*/index.mdx"], {
     cwd: path.join(process.cwd(), "content/blogs"),
   });
@@ -48,11 +99,14 @@ export async function getAllBlogs() {
 
 const root = process.cwd();
 
-export async function getFiles(type: any) {
+export async function getFiles(type: string): Promise<string[]> {
   return fs.readdirSync(path.join(root, "data", type));
 }
 
-export async function getFileBySlug(type: any, slug: any) {
+export async function getFileBySlug(
+  type: ContentType,
+  slug: string,
+): Promise<FileBySlugResult> {
   if (type !== "blogs") {
     throw new Error(`Unsupported type: ${type}`);
   }
@@ -69,16 +123,17 @@ export async function getFileBySlug(type: any, slug: any) {
   const { content } = matter(source);
   const mdxSource = await serialize(content);
 
-  let meta: any = {};
-  if (fs.existsSync(metadataPath)) {
-    try {
-      const raw = await readFile(metadataPath, "utf8");
-      meta = JSON.parse(raw);
-    } catch (err) {
-      throw new Error(
-        `Invalid metadata.json for slug '${slug}': ${(err as Error).message}`,
-      );
-    }
+  if (!fs.existsSync(metadataPath)) {
+    throw new Error(`metadata.json not found for slug '${slug}' at ${metadataPath}`);
+  }
+
+  let meta: BlogMetadata;
+  const context = `Invalid metadata.json for slug '${slug}'`;
+  try {
+    const raw = await readFile(metadataPath, "utf8");
+    meta = parseMetadata(raw, context);
+  } catch (err) {
+    throw new Error(`${context}: ${(err as Error).message}`);
   }
 
   return {
@@ -92,23 +147,26 @@ export async function getFileBySlug(type: any, slug: any) {
   };
 }
 
-export async function getAllFilesFrontMatter(type: any) {
+export async function getAllFilesFrontMatter(
+  type: string,
+): Promise<FrontMatterEntry[]> {
   console.log(
     'fs.readdirSync(path.join(root, "data", type));',
     fs.readdirSync(path.join(root, "data", type)),
   );
   const files = fs.readdirSync(path.join(root, "data", type));
 
-  return files.reduce((allPosts: any, postSlug: any) => {
+  return files.reduce<FrontMatterEntry[]>((allPosts, postSlug) => {
     const source = fs.readFileSync(
       path.join(root, "data", type, postSlug),
       "utf8",
     );
     const { data } = matter(source);
+    const frontMatter = isRecord(data) ? data : {};
 
     return [
       {
-        ...data,
+        ...frontMatter,
         slug: postSlug.replace(".mdx", ""),
       },
       ...allPosts,

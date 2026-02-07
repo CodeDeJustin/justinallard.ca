@@ -8,10 +8,7 @@ import { ExperienceTeaser } from "@/components/ExperienceTeaser";
 import { CertificationsTeaser } from "@/components/CertificationsTeaser";
 
 export default async function Page() {
-  const blogs = (await getAllBlogs()).slice(0, 4).map((b: any) => {
-    const { component, ...meta } = b;
-    return meta;
-  });
+  const blogs = (await getAllBlogs()).slice(0, 4);
 
   return (
     <Container>

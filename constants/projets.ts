@@ -28,7 +28,7 @@ export const projects: Project[] = [
   {
     title: "CPAPorama",
     description:
-      'Application mobile Android développée avec Flutter et Dart pour l’analyse et le suivi des données CPAP. Approche "privacy-first", "offline-first".',
+      'Application mobile Android en cours de développement avec Flutter et Dart pour l’analyse et le suivi des données CPAP. Approche "privacy-first", "offline-first".',
     image: "/images/projects/cpaporama.jpg",
     stack: [stack.flutter, stack.dart, stack.kotlin, stack.android],
     link: "https://github.com/CodeDeJustin/cpaporama",

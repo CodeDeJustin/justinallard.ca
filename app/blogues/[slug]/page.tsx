@@ -2,9 +2,11 @@ import { getAllBlogs, getFileBySlug } from "@/lib/blogs";
 import { RenderMDX } from "@/components/RenderMDX";
 import { BlogLayout } from "../_components/BlogLayout";
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   const blogs = await getAllBlogs();
-  return blogs.map((b: any) => ({ slug: b.slug }));
+  return blogs.map(({ slug }: { slug: string }) => ({ slug }));
 }
 
 export default async function BlogPage({
