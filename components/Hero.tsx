@@ -25,7 +25,7 @@ export const Hero = () => {
         applications web, outils internes et automatisations qui éliminent le
         travail répétitif. Mon avantage, c’est le profil hybride Full Stack +
         CAO/PLM, soutenu par une rigueur de livraison (PMP, Scrum): cadrage
-        clair, exécution propre, et décisions qui survivent à la production.
+        clair, exécution propre et décisions qui survivent à la production.
         Bref, moins de “clic-clic-clic”, plus de valeur livrée.
       </p>
     </div>

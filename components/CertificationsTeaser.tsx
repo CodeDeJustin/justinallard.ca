@@ -11,7 +11,7 @@ export function CertificationsTeaser() {
             Certifications
           </h2>
           <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-4 leading-loose tracking-wide">
-            Des repères concrets: gestion de projet, agilité, et un peu de
+            Des repères concrets: gestion de projet, agilité et un peu de
             discipline quand vient le temps de livrer.
           </p>
         </div>

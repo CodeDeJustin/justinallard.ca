@@ -22,7 +22,7 @@ export default async function BlogsPage() {
             J’écris sur le leadership, Scrum, la culture d’équipe et la vie
             réelle en entreprise (celle qui ne rentre jamais dans les beaux
             diagrammes). Objectif&nbsp;: partager des idées concrètes, des
-            exemples, et quelques prises de position assumées.
+            exemples et quelques prises de position assumées.
           </p>
         </div>
 

@@ -93,7 +93,7 @@ export default function ContactForm() {
                 id="name"
                 name="name"
                 type="text"
-                placeholder="Ton Nom"
+                placeholder="Ton nom"
                 maxLength={120}
                 className="shadow-input h-10 w-full rounded-md border border-transparent bg-white pl-4 text-sm text-neutral-700 placeholder-neutral-500 outline-none focus:ring-2 focus:ring-neutral-800 focus:outline-none active:outline-none dark:border-neutral-800 dark:bg-neutral-800 dark:text-white"
               />

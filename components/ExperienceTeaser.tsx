@@ -23,7 +23,7 @@ export const ExperienceTeaser = () => {
 
       <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-4 leading-loose tracking-wide">
         Des rôles et des mandats centrés sur la livraison: améliorer l’existant,
-        automatiser ce qui ralentit, et rendre les systèmes plus fiables.
+        automatiser ce qui ralentit et rendre les systèmes plus fiables.
       </p>
 
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-2 mt-20 max-w-2xl mx-auto">

@@ -12,7 +12,7 @@ export const uses = [
   {
     name: "Webcam + audio Logitech",
     description:
-      "Pour des réunions nettes: image propre, son clair, et moins de ‘répète donc?’ en appel.",
+      "Pour des réunions nettes: image propre, son clair et moins de ‘répète donc?’ en appel.",
   },
   {
     name: "Bureau ergonomique Motionwise (hauteur réglable)",
