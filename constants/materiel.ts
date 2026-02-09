@@ -2,36 +2,37 @@ export const uses = [
   {
     name: "Ordinateur de bureau Dell XPS",
     description:
-      "Le cœur de mon espace de travail. Configuré pour du développement intensif et de la 3D, avec des performances stables même sur de longues sessions.",
+      "Station de travail stable pour développement intensif et charges 3D, pensée pour la constance sur de longues sessions.",
   },
   {
     name: "Trois moniteurs Dell 27 pouces",
     description:
-      "Productivité sans pitié: multitâche, debug, CAO et docs en parallèle, sans jongler avec les fenêtres comme en 2009.",
+      "Triple affichage pour garder code, logs, documentation et CAO visibles en même temps, avec moins de changements de contexte.",
   },
   {
     name: "Webcam + audio Logitech",
     description:
-      "Pour des réunions nettes: image propre, son clair et moins de ‘répète donc?’ en appel.",
+      "Audio et vidéo clairs pour les appels: communication plus fluide et moins de répétitions.",
   },
   {
     name: "Bureau ergonomique Motionwise (hauteur réglable)",
-    description: "Assis ou debout, selon la journée.",
+    description:
+      "Hauteur réglable pour alterner assis et debout, et rester confortable sur la durée.",
   },
   {
     name: "Ordinateur portable HP Envy",
     description:
-      "Pour rester productif en déplacement, sans perdre le rythme quand je sors du bureau.",
+      "Poste mobile fiable pour travailler en déplacement sans casser le rythme.",
   },
   {
     name: "Batteries de secours / onduleurs APC",
     description:
-      "Fiabilité d’abord: alimentation protégée et continuité de travail pour éviter les interruptions stupides.",
+      "Protection électrique et continuité: moins d’interruptions, plus de tranquillité.",
   },
   {
     name: "Casque PlayStation PULSE 3D (et autres accessoires)",
     description:
-      "Petits détails, gros impact: communication plus nette et environnement sonore plus agréable pour travailler concentré.",
+      "Confort et concentration au quotidien, avec une communication plus nette en réunion.",
   },
 ] as const;
 

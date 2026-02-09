@@ -92,8 +92,7 @@ export function ProjectsTeaser({ count = 3 }: { count?: number }) {
             Aperçu de mes projets
           </h2>
           <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-4 leading-loose tracking-wide">
-            Une sélection courte, juste pour donner le ton. Le détail est sur la
-            page Projets.
+            Une sélection courte. Les détails sont sur la page Projets
           </p>
         </div>
 

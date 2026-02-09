@@ -2,7 +2,7 @@ export const workExperience = [
   {
     company: "Harnois Énergies",
     role: "Développeur logiciel",
-    startDate: "2025-06-01",
+    startDate: "2025-06-23",
     endDate: "2025-12-01",
     description: [
       "Développement et amélioration de solutions internes.",
@@ -15,8 +15,8 @@ export const workExperience = [
   {
     company: "Consultant indépendant",
     role: "Consultant en intégration IA",
-    startDate: "2025-01-01",
-    endDate: "2025-06-01",
+    startDate: "2025-01-06",
+    endDate: "2025-07-11",
     description: [
       "Veille et évaluation d’outils IA pour développeurs.",
       "Prototypage, tests et recommandations.",
@@ -28,8 +28,8 @@ export const workExperience = [
   {
     company: "Logiciels Sys-Thèmes inc.",
     role: "Développeur Full Stack",
-    startDate: "2024-05-01",
-    endDate: "2025-04-01",
+    startDate: "2024-05-27",
+    endDate: "2025-04-04",
     description: [
       "Migration d’un outil legacy vers Flexio® ERP.",
       "Développement backend Java et intégration BD.",
@@ -40,8 +40,8 @@ export const workExperience = [
   },
   {
     company: "Binder",
-    role: "Développeur Web et mobile",
-    startDate: "2023-09-01",
+    role: "Stagiaire développeur Web et mobile",
+    startDate: "2023-09-18",
     endDate: "2023-12-01",
     description: [
       "Authentification et features mobile (Svelte/SvelteKit).",
@@ -53,9 +53,9 @@ export const workExperience = [
   },
   {
     company: "Industries Harnois inc.",
-    role: "Gestionnaire projets et automatisation CAO",
-    startDate: "2008-06-01",
-    endDate: "2022-08-01",
+    role: "Programmeur CAO et gestionnaire projets",
+    startDate: "2008-06-02",
+    endDate: "2022-08-26",
     description: [
       "Gestionnaire de projets d'envergure.",
       "Programmation sur PTC Creo.",

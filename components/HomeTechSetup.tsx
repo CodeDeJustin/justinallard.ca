@@ -14,7 +14,7 @@ function SetupTeaser() {
             Matériel
           </h2>
           <p className="mt-2 text-sm text-zinc-400">
-            Aperçu de mon setup dev + CAO.
+            Aperçu de mon environnement.
           </p>
         </div>
 

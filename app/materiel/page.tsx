@@ -13,8 +13,9 @@ export default function MaterielPage() {
         </h1>
 
         <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-8 md:leading-loose tracking-wide">
-          Mon poste de travail pour le dev, la CAO et les tests. Simple, fiable,
-          et pensé pour être confortable sur la durée.
+          Mon poste de travail pour le développement, la CAO et les tests: une
+          configuration sobre, fiable et optimisée pour rester efficace et
+          confortable sur la durée.
         </p>
 
         <div className="mt-10">

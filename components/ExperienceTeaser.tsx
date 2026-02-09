@@ -31,7 +31,11 @@ export const ExperienceTeaser = () => {
         <div className="flex flex-row md:flex-col gap-2 md:gap-0 relative overflow-x-auto md:overflow-x-visible pb-2 md:pb-0 snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
           {/* Beam seulement sur desktop */}
           <div className="hidden md:block absolute -left-6 w-px h-full bg-zinc-800 overflow-hidden">
-            <Beam showBeam={true} className="-left-0" />
+            <Beam
+              showBeam={true}
+              variant="experience"
+              className="[--meteor-size:0.9rem] [--meteor-width:160px] [--meteor-tail:4px]"
+            />
           </div>
 
           {workExperience.map((exp, idx) => (

@@ -43,7 +43,7 @@ export function TabAttention() {
     });
     if (titleEl) observer.observe(titleEl, { childList: true });
 
-    const awayTitle = "NON! RESTE AVEC MOI! 😭";
+    const awayTitle = "NON! Reste avec moi! 😭";
     const awayFavicon = "icones/coffee-icon.ico";
 
     const onBlur = () => {

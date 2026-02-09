@@ -13,7 +13,9 @@ export default function CertificationsPage() {
         </h1>
 
         <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-8 md:leading-loose tracking-wide">
-          Le sérieux est dans les projets. Ici, c’est la paperasse utile.
+          Des repères de méthode et de rigueur. Les certifications ne font pas
+          le travail, mais elles accélèrent la compréhension quand on doit
+          livrer ensemble.
         </p>
 
         <CertificationsGrid />

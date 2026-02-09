@@ -5,7 +5,7 @@ export type TechnologieItem = {
 
 export const technologiesSections = [
   {
-    title: "Développement (Core)",
+    title: "Développement",
     items: [
       { file: "typescript.svg", label: "TypeScript" },
       { file: "react.svg", label: "React" },

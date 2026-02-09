@@ -19,10 +19,9 @@ export default async function BlogsPage() {
             <span className="text-brand-500">notes de terrain</span>
           </h1>
           <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-8 md:leading-loose tracking-wide">
-            J’écris sur le leadership, Scrum, la culture d’équipe et la vie
-            réelle en entreprise (celle qui ne rentre jamais dans les beaux
-            diagrammes). Objectif&nbsp;: partager des idées concrètes, des
-            exemples et quelques prises de position assumées.
+            J’écris sur le leadership, Scrum, la culture d’équipe et la réalité
+            du travail en entreprise. Objectif: partager des idées concrètes,
+            des exemples applicables et des prises de position réfléchies.
           </p>
         </div>
 

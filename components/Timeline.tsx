@@ -6,7 +6,11 @@ export const Timeline = () => {
   return (
     <div className="max-w-3xl mx-auto   divide-zinc-800 relative">
       <div className="absolute h-full w-[4px] bg-gradient-to-b from-transparent via-brand-500 to:transparent  -left-4 md:-left-10">
-        <Beam showBeam={true} className={`left-1`} />
+        <Beam
+          showBeam={true}
+          variant="timeline"
+          className="[--meteor-size:1.2rem] [--meteor-width:240px] [--meteor-tail:6px]"
+        />
       </div>
       {timeline.map((item: TimelineItem, idx: number) => (
         <div key={`timeline-item-${idx}`} className="border-b border-zinc-800">

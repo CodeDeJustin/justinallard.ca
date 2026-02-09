@@ -29,27 +29,43 @@ export const timeline: TimelineItem[] = [
     ],
   },
   {
+    year: 2022,
+    points: [
+      "AEC en développement logiciel: consolidation des bases pour compléter mon profil d’automatisation",
+      "Projets applicatifs: interfaces, API, persistance de données et intégration de fonctionnalités réelles",
+      "Renforcement des méthodes: Git, bonnes pratiques, tests et rigueur de livraison en équipe",
+    ],
+  },
+  {
+    year: 2020,
+    points: [
+      "Megadome (Industries Harnois): programmation, conception et R&D d’un nouveau produit d’envergure",
+      "Études de faisabilité: fabrication, installation et viabilité technique du produit sur le terrain",
+      "Automatisation d’outils et de méthodes pour accélérer la conception et fiabiliser l’exécution",
+    ],
+  },
+  {
+    year: 2014,
+    points: [
+      "Projet Megadome au Port de Trois-Rivières: structure d’entreposage d’envergure (ingénierie & coordination)",
+      "Coordination multi-parties prenantes (Port, Hydro-Québec, installation) et gestion des contraintes",
+      "Livraison terrain: planification, suivi d’exécution et résolution de problèmes pour tenir délais et qualité",
+    ],
+  },
+  {
     year: 2008,
     points: [
       "Industries Harnois: Programmation et automatisation de la modélisation 3D sur PTC Creo",
-      "Optimisation des workflows et gestion documentaire sous Windchill PLM",
+      "Optimisation des flux de travail et gestion documentaire sous Windchill PLM",
       "Gestionnaire de projets d’ingénierie (R&D, projets spéciaux, collaboration interdisciplinaire)",
     ],
   },
   {
     year: 2006,
     points: [
-      "Les portes Bourassa: coordonnateur de projets, gestion des ressources humaines, optimisation Lean Manufacturing",
-      "Programmation de machines-outils (usinage/sculpture assistée par ordinateur)",
-      "Mise en œuvre Kanban/Kaizen/Lean/Six Sigma & création d’un manuel employé RH/procédures",
-    ],
-  },
-  {
-    year: 2002,
-    points: [
-      "ITI Hydraulik: conception-dessin CAO et coordination de projets",
-      "Calcul de contraintes/tolérances, support technique interne, planification de production",
-      "Contributions: ISO 9001 (processus qualité), CTPAT, francisation de documents techniques, projet marquant (Doha, Qatar)",
+      "Les portes Bourassa Inc.: Concepteur technique & coordonnateur de projet",
+      "Coordination projets + dessins de production; support aux opérations",
+      "Lean/Kanban/Kaizen/Six Sigma: optimisation et standardisation des processus",
     ],
   },
 ];
