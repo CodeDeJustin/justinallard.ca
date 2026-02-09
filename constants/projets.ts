@@ -64,7 +64,7 @@ export const projects: Project[] = [
       "Mon site vitrine legacy, construit volontairement en HTML/CSS/JavaScript “vanille” pour la performance et la simplicité.",
     image: "/images/projects/legacyweb.png",
     stack: [stack.html, stack.css, stack.javascript],
-    link: "https://github.com/CodeDeJustin/justinallard.ca-legacy",
+    link: "https://legacy.justinallard.ca/",
     repo: "https://github.com/CodeDeJustin/justinallard.ca-legacy",
   },
 ];
