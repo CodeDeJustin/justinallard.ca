@@ -10,7 +10,9 @@ type ContainerProps = {
 
 export const Container = ({ children, className }: ContainerProps) => {
   return (
-    <main className={clsx("min-h-screen antialiased bg-zinc-900", className)}>
+    <main
+      className={clsx("min-h-screen antialiased bg-transparent", className)}
+    >
       {children}
     </main>
   );

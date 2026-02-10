@@ -2,7 +2,7 @@
 import { workExperience } from "@/constants/workExperience";
 import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useState } from "react";
+import { useState } from "react";
 import Beam from "./Beam/Beam";
 import moment from "moment";
 import "moment/locale/fr";

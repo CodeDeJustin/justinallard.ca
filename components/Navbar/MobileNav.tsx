@@ -2,7 +2,7 @@
 import { Logo } from "@/components/Logo";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { IoIosCloseCircleOutline, IoIosMenu } from "react-icons/io";
 import { CustomLink } from "../CustomLink";
 

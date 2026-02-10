@@ -21,9 +21,7 @@ export function TechnologiesShowcase() {
                   key={file}
                   type="button"
                   title={label}
-                  className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-zinc-800 p-3
-                             text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/50
-                             focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
+                  className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-zinc-800 p-3 cursor-default text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/50 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
                 >
                   <TechLogo
                     src={`/images/logos/${file}`}

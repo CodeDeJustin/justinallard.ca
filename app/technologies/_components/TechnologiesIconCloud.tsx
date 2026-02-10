@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Cloud, type ICloud } from "react-icon-cloud";
 import { technologies } from "@/constants/technologies";
 

@@ -7,10 +7,246 @@ body {
   scroll-behavior: smooth;
 }
 
+:root {
+  /* Violet violent (très saturé) */
+  --aurora-from: #ff5fd7; /* rose-magenta un peu plus “néon” */
+  --aurora-to: #4b00ff; /* violet électrique */
+}
+
+.aurora-gradient {
+  background-image: linear-gradient(
+    to top right,
+    var(--aurora-from),
+    var(--aurora-to)
+  );
+}
+
 @layer components {
   .shadow-input {
     box-shadow:
       0px 1px 0px 0px rgba(255, 255, 255, 0.06) inset,
       0px 10px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Aurora: déplacement organique + intensité (PERCEPTIBLE) */
+@keyframes aurora-wander-a {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  12% {
+    transform: translate3d(16vw, -10vh, 0) rotate(4deg) scale(1.06);
+  }
+  27% {
+    transform: translate3d(-14vw, 12vh, 0) rotate(-3deg) scale(1.03);
+  }
+  43% {
+    transform: translate3d(20vw, 16vh, 0) rotate(6deg) scale(1.08);
+  }
+  58% {
+    transform: translate3d(-18vw, -14vh, 0) rotate(-5deg) scale(1.04);
+  }
+  74% {
+    transform: translate3d(10vw, 18vh, 0) rotate(3deg) scale(1.07);
+  }
+  88% {
+    transform: translate3d(-8vw, -6vh, 0) rotate(-2deg) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes aurora-wander-b {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  18% {
+    transform: translate3d(-18vw, 8vh, 0) rotate(-4deg) scale(1.07);
+  }
+  36% {
+    transform: translate3d(12vw, 14vh, 0) rotate(3deg) scale(1.03);
+  }
+  55% {
+    transform: translate3d(-10vw, -16vh, 0) rotate(5deg) scale(1.08);
+  }
+  73% {
+    transform: translate3d(16vw, -8vh, 0) rotate(-3deg) scale(1.05);
+  }
+  90% {
+    transform: translate3d(-6vw, 4vh, 0) rotate(2deg) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes aurora-wander-c {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  15% {
+    transform: translate3d(14vw, 10vh, 0) rotate(3deg) scale(1.06);
+  }
+  33% {
+    transform: translate3d(-16vw, -10vh, 0) rotate(-6deg) scale(1.03);
+  }
+  52% {
+    transform: translate3d(10vw, -18vh, 0) rotate(5deg) scale(1.09);
+  }
+  70% {
+    transform: translate3d(-12vw, 14vh, 0) rotate(-3deg) scale(1.05);
+  }
+  86% {
+    transform: translate3d(8vw, -6vh, 0) rotate(2deg) scale(1.03);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes aurora-glow {
+  0%,
+  100% {
+    filter: saturate(1.05) brightness(1);
+  }
+  35% {
+    filter: saturate(1.35) brightness(1.55);
+  }
+  70% {
+    filter: saturate(1.15) brightness(1.15);
+  }
+}
+
+.aurora-wander-a {
+  will-change: transform;
+  animation: aurora-wander-a 70s linear infinite;
+}
+.aurora-wander-b {
+  will-change: transform;
+  animation: aurora-wander-b 88s linear infinite;
+}
+.aurora-wander-b2 {
+  will-change: transform;
+  animation: aurora-wander-b 112s linear infinite;
+  animation-delay: -37s;
+}
+.aurora-wander-c {
+  will-change: transform;
+  animation: aurora-wander-c 78s linear infinite;
+}
+
+.aurora-glow-1 {
+  will-change: filter;
+  animation: aurora-glow 18s ease-in-out infinite;
+}
+.aurora-glow-2 {
+  will-change: filter;
+  animation: aurora-glow 24s ease-in-out infinite;
+}
+.aurora-glow-3 {
+  will-change: filter;
+  animation: aurora-glow 21s ease-in-out infinite;
+}
+
+/* Déplacement continu (sans “stop & reverse” aux coins de keyframes) */
+@keyframes aurora-orbit {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
+
+/* Motion Path: override les .aurora-wander-* si supporté */
+@supports (offset-path: ellipse(10px 10px at 50% 50%)) {
+  .aurora-wander-a,
+  .aurora-wander-b,
+  .aurora-wander-c {
+    will-change: offset-distance;
+    offset-rotate: 0deg; /* évite la rotation sur la tangente */
+  }
+
+  /* Halo haut */
+  .aurora-wander-a {
+    offset-path: ellipse(26vw 16vh at 50% 12%);
+    animation: aurora-orbit 70s linear infinite;
+  }
+
+  /* Halo milieu (sens inverse pour désynchroniser) */
+  .aurora-wander-b {
+    offset-path: ellipse(32vw 22vh at 55% 45%);
+    animation: aurora-orbit 88s linear infinite reverse;
+  }
+
+  .aurora-wander-b2 {
+    offset-path: ellipse(36vw 26vh at 48% 62%);
+    animation: aurora-orbit 132s linear infinite;
+    animation-delay: -53s;
+  }
+
+  /* Halo bas */
+  .aurora-wander-c {
+    offset-path: ellipse(28vw 16vh at 52% 88%);
+    animation: aurora-orbit 78s linear infinite;
+  }
+}
+
+/* Micro-orbites internes (sans offset-path, donc pas de clipping surprise) */
+@keyframes aurora-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Un “champ” qui tourne */
+.aurora-orbit {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+.aurora-orbit-1 {
+  animation: aurora-spin 26s linear infinite;
+}
+.aurora-orbit-2 {
+  animation: aurora-spin 33s linear infinite reverse;
+}
+.aurora-orbit-3 {
+  animation: aurora-spin 41s linear infinite;
+}
+
+/* Un “bras” qui place le blob à une distance du centre */
+.aurora-arm {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+}
+
+.aurora-arm-1 {
+  transform: translate3d(8vw, -4vh, 0);
+}
+.aurora-arm-2 {
+  transform: translate3d(-10vw, 6vh, 0);
+}
+.aurora-arm-3 {
+  transform: translate3d(6vw, 10vh, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-wander-a,
+  .aurora-wander-b,
+  .aurora-wander-c,
+  .aurora-glow-1,
+  .aurora-glow-2,
+  .aurora-glow-3,
+  .aurora-orbit-1,
+  .aurora-orbit-2,
+  .aurora-orbit-3 {
+    animation: none !important;
   }
 }
