@@ -16,7 +16,7 @@ export default function TechnologiesPage() {
         <p className="text-zinc-400 mt-6 md:leading-loose max-w-3xl">
           Voici ma pile technologique, regroupée par domaines: développement,
           backend & données, outils, mobile et CAO/PLM. C’est ce que j’utilise
-          pour livrer, automatiser et maintenir des solutions solides.
+          pour livrer, automatiser et maintenir des solutions concrètes.
         </p>
 
         <TechnologiesShowcase />

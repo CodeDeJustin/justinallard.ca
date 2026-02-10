@@ -21,9 +21,9 @@ export const Hero = () => {
       </h1>
 
       <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-8 leading-loose tracking-wide">
-        Je transforme des besoins concrets en solutions solides: applications
-        web, outils internes et automatisations qui coupent dans le répétitif.
-        Mon atout, c’est un profil hybride Full Stack + CAO/PLM, soutenu par une
+        Je transforme des besoins concrets en solutions concrètes: applications
+        web, outils internes et automatisations qui gagnent en efficacité. Mon
+        atout, c’est un profil hybride Full Stack + CAO/PLM, soutenu par une
         rigueur de livraison (PMP, Scrum): cadrage clair, exécution propre,
         décisions qui survivent au monde réel. Résultat: moins de friction, plus
         de valeur livrée.

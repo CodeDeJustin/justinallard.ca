@@ -35,8 +35,7 @@ export default function ProfilPage() {
           <p className="text-zinc-400 text-sm md:text-base max-w-2xl mt-4 md:leading-loose tracking-wide">
             Mon parcours inclut aussi l’automatisation CAO et l’intégration PLM
             (PTC Creo, Windchill), ce qui me rend à l’aise autant côté “écran et
-            API” que côté ingénierie et processus. Si une solution dépend d’un
-            miracle en production, je préfère qu’on en parle tout de suite.
+            API” que côté ingénierie et processus.
           </p>
         </div>
 
