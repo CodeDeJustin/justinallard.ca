@@ -52,7 +52,7 @@ export const Contact = () => {
 
         <button
           onClick={handleButtonClick}
-          className="flex h-14 w-14 items-center justify-center rounded-full bg-zinc-700 shadow-lg transition duration-200 hover:scale-105 hover:shadow-xl"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-500 shadow-lg transition duration-200 hover:scale-105 hover:bg-brand-600 hover:shadow-xl"
           aria-label={
             open
               ? "Fermer le formulaire de contact"
