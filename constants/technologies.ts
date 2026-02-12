@@ -74,14 +74,14 @@ export const technologiesTeaserSelection = [
   "TypeScript",
   "React",
   "Next.js",
+  "Tailwind CSS",
   "Node.js",
   "C#",
   ".NET",
+  "Python",
   "SQL Server",
   "Azure",
-  "Tailwind CSS",
-  "Python",
-  "GitHub",
+  "Git",
   "SolidWorks",
 ] as const;
 

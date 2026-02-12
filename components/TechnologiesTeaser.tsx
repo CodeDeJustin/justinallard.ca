@@ -32,7 +32,7 @@ export function TechnologiesTeaser({
             Technologies
           </h2>
           <p className="mt-2 text-sm text-zinc-400">
-            Aperçu de ma pile technologique principale.
+            Aperçu de ma pile technologique.
           </p>
         </div>
 
