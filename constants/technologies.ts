@@ -38,8 +38,8 @@ export const technologiesSections = [
       { file: "confluence.svg", label: "Confluence" },
       { file: "azure.svg", label: "Azure" },
       { file: "azuredevops.svg", label: "Azure DevOps" },
+      { file: "vercel.svg", label: "Vercel" },
       { file: "codex.png", label: "OpenAI Codex" },
-      { file: "openai.svg", label: "OpenAI" },
     ],
   },
   {
