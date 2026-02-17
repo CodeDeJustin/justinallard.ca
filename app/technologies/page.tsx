@@ -1,10 +1,47 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import { Container } from "@/components/Container";
 import { TechnologiesShowcase } from "@/components/TechnologiesShowcase";
 
-export const metadata: Metadata = {
-  title: "Technologies | Justin Allard",
-};
+export async function generateMetadata(
+  _: unknown,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const parentMetadata = await parent;
+
+  const title = "Technologies | Justin Allard";
+  const description =
+    "Pile technologique regroupée par domaines: développement, backend & données, outils, mobile et CAO/PLM.";
+
+  const shareImage = "/images/opengraph/JustinAllard_Opengraph.jpg";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/technologies" },
+
+    openGraph: {
+      ...(parentMetadata.openGraph ?? {}),
+      title,
+      description,
+      url: "/technologies",
+      images: [
+        {
+          url: shareImage,
+          width: 1200,
+          height: 750,
+          alt: "Justin Allard - Technologies",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImage],
+    },
+  };
+}
 
 export default function TechnologiesPage() {
   return (

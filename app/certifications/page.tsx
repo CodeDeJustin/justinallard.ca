@@ -1,8 +1,48 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import { Container } from "@/components/Container";
 import { CertificationsGrid } from "./_components/CertificationsGrid";
 
-export const metadata: Metadata = { title: "Certifications | Justin Allard" };
+export async function generateMetadata(
+  _: unknown,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const parentMetadata = await parent;
+
+  const title = "Certifications | Justin Allard";
+  const description =
+    "Certifications et attestations: repères de méthode et de rigueur (PMP, PSM II, PSPO I, CSWA, etc.).";
+
+  const shareImage =
+    "/images/opengraph/JustinAllard_Opengraph_Certifications.jpg";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/certifications" },
+
+    openGraph: {
+      ...(parentMetadata.openGraph ?? {}),
+      title,
+      description,
+      url: "/certifications",
+      images: [
+        {
+          url: shareImage,
+          width: 1200,
+          height: 800,
+          alt: "Justin Allard - Certifications",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImage],
+    },
+  };
+}
 
 export default function CertificationsPage() {
   return (

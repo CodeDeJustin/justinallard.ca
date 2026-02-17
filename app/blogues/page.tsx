@@ -1,11 +1,48 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import { Container } from "@/components/Container";
 import AllBlogs from "@/app/blogues/_components/AllBlogs";
 import { getAllBlogs } from "@/lib/blogs";
 
-export const metadata: Metadata = {
-  title: "Blogue | Justin Allard",
-};
+export async function generateMetadata(
+  _: unknown,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const parentMetadata = await parent;
+
+  const title = "Blogue | Justin Allard";
+  const description =
+    "Notes de terrain sur le leadership, Scrum, la culture d’équipe et la réalité du travail en entreprise.";
+
+  const shareImage = "/images/opengraph/JustinAllard_Opengraph_Blogues.jpg";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/blogues" },
+
+    openGraph: {
+      ...(parentMetadata.openGraph ?? {}),
+      title,
+      description,
+      url: "/blogues",
+      images: [
+        {
+          url: shareImage,
+          width: 1200,
+          height: 800,
+          alt: "Justin Allard - Blogue",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImage],
+    },
+  };
+}
 
 export default async function BlogsPage() {
   const blogs = await getAllBlogs();

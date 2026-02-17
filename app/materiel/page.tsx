@@ -1,8 +1,47 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import { Container } from "@/components/Container";
 import { MaterielStickyScroll } from "./_components/MaterielStickyScroll";
 
-export const metadata: Metadata = { title: "Matériel | Justin Allard" };
+export async function generateMetadata(
+  _: unknown,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const parentMetadata = await parent;
+
+  const title = "Matériel | Justin Allard";
+  const description =
+    "Poste de travail pour le développement, la CAO et les tests: une configuration sobre, fiable et optimisée.";
+
+  const shareImage = "/images/opengraph/JustinAllard_Opengraph.jpg";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/materiel" },
+
+    openGraph: {
+      ...(parentMetadata.openGraph ?? {}),
+      title,
+      description,
+      url: "/materiel",
+      images: [
+        {
+          url: shareImage,
+          width: 1200,
+          height: 750,
+          alt: "Justin Allard - Portfolio",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImage],
+    },
+  };
+}
 
 export default function MaterielPage() {
   return (

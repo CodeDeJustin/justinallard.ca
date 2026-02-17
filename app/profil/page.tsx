@@ -1,14 +1,49 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Timeline } from "@/components/Timeline";
 import { SocialLinks } from "@/components/SocialLinks";
 
-export const metadata: Metadata = {
-  title: "Profil | Justin Allard",
-  description:
-    "Développeur logiciel Full Stack avec un profil hybride CAO/PLM et gestion de projets.",
-};
+export async function generateMetadata(
+  _: unknown,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const parentMetadata = await parent;
+
+  const title = "Profil | Justin Allard";
+  const description =
+    "Développeur logiciel Full Stack avec un profil hybride CAO/PLM et gestion de projets.";
+
+  const shareImage = "/images/opengraph/JustinAllard_Opengraph.jpg";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/profil" },
+
+    openGraph: {
+      ...(parentMetadata.openGraph ?? {}),
+      title,
+      description,
+      url: "/profil",
+      images: [
+        {
+          url: shareImage,
+          width: 1200,
+          height: 750,
+          alt: "Justin Allard - Portfolio",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImage],
+    },
+  };
+}
 
 export default function ProfilPage() {
   return (

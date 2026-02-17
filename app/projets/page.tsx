@@ -1,8 +1,47 @@
-import type { Metadata } from "next";
+import type { Metadata, ResolvingMetadata } from "next";
 import { Container } from "@/components/Container";
 import { ProjectsGrid } from "@/components/ProjectsGrid";
 
-export const metadata: Metadata = { title: "Projets | Justin Allard" };
+export async function generateMetadata(
+  _: unknown,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const parentMetadata = await parent;
+
+  const title = "Projets | Justin Allard";
+  const description =
+    "Sélection de projets qui reflètent mon parcours, mes choix techniques et ce que j’aime construire.";
+
+  const shareImage = "/images/opengraph/JustinAllard_Opengraph_Projets.jpg";
+
+  return {
+    title,
+    description,
+    alternates: { canonical: "/projets" },
+
+    openGraph: {
+      ...(parentMetadata.openGraph ?? {}),
+      title,
+      description,
+      url: "/projets",
+      images: [
+        {
+          url: shareImage,
+          width: 1200,
+          height: 800,
+          alt: "Justin Allard - Projets",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [shareImage],
+    },
+  };
+}
 
 export default function ProjetsPage() {
   return (
