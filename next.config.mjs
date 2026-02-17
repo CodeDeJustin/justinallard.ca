@@ -34,6 +34,20 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
+
+  async headers() {
+    return [
+      {
+        source: "/images/entreprises/:path*",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, noimageindex, noarchive",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 const withMDX = nextMDX({

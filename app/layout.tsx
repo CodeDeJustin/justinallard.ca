@@ -93,6 +93,24 @@ export const metadata: Metadata = {
 
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Justin Allard",
+  url: "https://justinallard.ca",
+  image: [
+    "https://justinallard.ca/images/JustinAllard.jpg",
+    "https://justinallard.ca/images/JustinAllard_Avatar.jpg",
+    "https://justinallard.ca/images/JustinAllardProfil.jpg",
+    "https://justinallard.ca/images/opengraph/JustinAllard_Opengraph.jpg",
+    "https://justinallard.ca/images/opengraph/JustinAllard_Opengraph_Blogues.jpg",
+    "https://justinallard.ca/images/opengraph/JustinAllard_Opengraph_Certifications.jpg",
+    "https://justinallard.ca/images/opengraph/JustinAllard_Opengraph_Contact.jpg",
+    "https://justinallard.ca/images/opengraph/JustinAllard_Opengraph_Projets.jpg",
+  ],
+  jobTitle: "Developpeur logiciel Full Stack",
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -105,6 +123,10 @@ export default function RootLayout({
           id="cookieyes"
           src="https://cdn-cookieyes.com/client_data/cc5706dbc70897eafe23e0e6/script.js"
           strategy="beforeInteractive"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         <div className="relative min-h-screen">
           <AuroraBackground />
