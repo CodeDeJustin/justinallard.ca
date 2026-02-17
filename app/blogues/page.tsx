@@ -9,7 +9,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const parentMetadata = await parent;
 
-  const title = "Blogue | Justin Allard";
+  const title = "Blogue";
   const description =
     "Notes de terrain sur le leadership, Scrum, la culture d’équipe et la réalité du travail en entreprise.";
 

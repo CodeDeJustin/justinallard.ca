@@ -8,7 +8,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const parentMetadata = await parent;
 
-  const title = "Certifications | Justin Allard";
+  const title = "Certifications";
   const description =
     "Certifications et attestations: repères de méthode et de rigueur (PMP, PSM II, PSPO I, CSWA, etc.).";
 

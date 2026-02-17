@@ -8,7 +8,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const parentMetadata = await parent;
 
-  const title = "Matériel | Justin Allard";
+  const title = "Matériel";
   const description =
     "Poste de travail pour le développement, la CAO et les tests: une configuration sobre, fiable et optimisée.";
 

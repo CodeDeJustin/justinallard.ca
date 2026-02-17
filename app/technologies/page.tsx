@@ -8,7 +8,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const parentMetadata = await parent;
 
-  const title = "Technologies | Justin Allard";
+  const title = "Technologies";
   const description =
     "Pile technologique regroupée par domaines: développement, backend & données, outils, mobile et CAO/PLM.";
 

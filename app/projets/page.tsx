@@ -8,7 +8,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const parentMetadata = await parent;
 
-  const title = "Projets | Justin Allard";
+  const title = "Projets";
   const description =
     "Sélection de projets qui reflètent mon parcours, mes choix techniques et ce que j’aime construire.";
 

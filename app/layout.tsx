@@ -78,7 +78,7 @@ export const metadata: Metadata = {
         url: "/images/opengraph/JustinAllard_Opengraph.jpg",
         width: 1200,
         height: 750,
-        alt: "Justin Allard - Portfolio",
+        alt: "Justin Allard",
       },
     ],
   },
@@ -91,11 +91,6 @@ export const metadata: Metadata = {
     images: ["/images/opengraph/JustinAllard_Opengraph.jpg"],
   },
 
-  other: {
-    "og:image:type": "image/jpeg",
-    "og:image:width": "1200",
-    "og:image:height": "750",
-  },
 };
 
 export default function RootLayout({

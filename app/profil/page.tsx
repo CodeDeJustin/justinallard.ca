@@ -10,7 +10,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const parentMetadata = await parent;
 
-  const title = "Profil | Justin Allard";
+  const title = "Profil";
   const description =
     "Développeur logiciel Full Stack avec un profil hybride CAO/PLM et gestion de projets.";
 
